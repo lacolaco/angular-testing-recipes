@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "lint": "ng lint"
+    "lint": "ng lint && stylelint 'src/**/*.css'",
+    "lint:fix": "ng lint --fix && stylelint 'src/**/*.css' --fix"
   },
   "private": true,
   "dependencies": {
@@ -39,8 +40,16 @@
     "@typescript-eslint/eslint-plugin": "4.23.0",
     "@typescript-eslint/parser": "4.23.0",
     "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.4",
     "jest-preset-angular": "^9.0.4",
+    "prettier": "^2.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-prettier": "^1.2.0",
     "typescript": "~4.2.3"
   }
 }
