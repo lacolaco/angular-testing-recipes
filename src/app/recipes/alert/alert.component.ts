@@ -60,7 +60,7 @@ export class AlertComponent {
     this._dismissible = coerceBooleanProperty(value);
     this.cdRef.markForCheck();
   }
-  _dismissible = false;
+  private _dismissible = false;
 
   @Output()
   readonly closed = new EventEmitter<void>();
