@@ -3,6 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   EventEmitter,
+  HostBinding,
   Input,
   Output,
 } from '@angular/core';
@@ -38,7 +39,6 @@ type AlertContext =
   ],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
-    role: 'alert',
     class: 'app-alert',
     '[style.display]': 'isClosed ? "none" : "block"',
   },
@@ -64,6 +64,11 @@ export class AlertComponent {
 
   @Output()
   readonly closed = new EventEmitter<void>();
+
+  @HostBinding('attr.role')
+  get role() {
+    return this.isClosed ? null : this.dismissible ? 'alertdialog' : 'alert';
+  }
 
   isClosed = false;
 

@@ -1,4 +1,8 @@
-import { render } from '@testing-library/angular';
+import {
+  render,
+  waitFor,
+  waitForElementToBeRemoved,
+} from '@testing-library/angular';
 import { AlertComponent } from './alert.component';
 
 describe('AlertComponent', () => {
@@ -7,12 +11,21 @@ describe('AlertComponent', () => {
       declarations: [AlertComponent],
     });
 
-    expect(getByRole('alert', { hidden: false })).toHaveTextContent('TEXT');
+    expect(getByRole('alert')).toHaveTextContent('TEXT');
   });
 
   // TODO: add specs for context
 
   describe('dismissible alert', () => {
+    it('should render an alertdialog', async () => {
+      const { getByRole } = await render(
+        `<app-alert dismissible>TEXT</app-alert>`,
+        { declarations: [AlertComponent] },
+      );
+
+      expect(getByRole('alertdialog')).toHaveTextContent('TEXT');
+    });
+
     it('should have a close button', async () => {
       const { getByRole } = await render(
         `<app-alert dismissible>TEXT</app-alert>`,
@@ -23,13 +36,15 @@ describe('AlertComponent', () => {
     });
 
     it('should dismiss after close button click', async () => {
-      const { getByRole } = await render(
+      const { getByRole, queryByRole } = await render(
         `<app-alert dismissible>TEXT</app-alert>`,
         { declarations: [AlertComponent] },
       );
       getByRole('button', { name: /Close/i }).click();
 
-      expect(getByRole('alert', { hidden: true })).toBeInTheDocument();
+      await waitFor(() => {
+        expect(queryByRole('alertdialog')).not.toBeInTheDocument();
+      });
     });
 
     it('should emit (closed) event', async () => {
