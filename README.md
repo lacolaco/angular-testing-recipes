@@ -10,6 +10,10 @@ This project is a collection of testing examples of Angular applications and lib
 - [Jest](https://jestjs.io/)
 - [Angular Testing Library](https://github.com/testing-library/angular-testing-library)
 
+## Recipes
+
+See [recipes directory](https://github.com/lacolaco/angular-testing-recipes/tree/main/src/app/recipes).
+
 ## Recipe Request
 
 If you have an idea for a new recipe, please [file an issue](https://github.com/lacolaco/angular-testing-recipes/issues/new) to request it.
