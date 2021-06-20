@@ -1,8 +1,4 @@
-import {
-  render,
-  waitFor,
-  waitForElementToBeRemoved,
-} from '@testing-library/angular';
+import { render, waitFor } from '@testing-library/angular';
 import { AlertComponent } from './alert.component';
 
 describe('AlertComponent', () => {
