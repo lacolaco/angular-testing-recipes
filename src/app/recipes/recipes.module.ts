@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CardModule } from './card/card.module';
-import { ButtonModule } from './button/button.module';
 import { AlertModule } from './alert/alert.module';
+import { ButtonModule } from './button/button.module';
+import { CardModule } from './card/card.module';
+import { ToastModule } from './toast/toast.module';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, CardModule, ButtonModule, AlertModule],
+  exports: [CardModule, ButtonModule, AlertModule, ToastModule],
 })
 export class RecipesModule {}
