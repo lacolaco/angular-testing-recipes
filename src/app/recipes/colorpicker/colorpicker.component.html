@@ -1,0 +1,15 @@
+<div role="listbox" [attr.aria-activedescendant]="selectedOptionId ?? null">
+  <ng-container *ngFor="let color of colors; let index = index">
+    <div
+      #option
+      role="option"
+      style="border-radius: 4px; height: 16px; width: 16px"
+      [style.background-color]="color"
+      [attr.tab-index]="0"
+      [attr.id]="getOptionId(index)"
+      [title]="color"
+      (click)="onSelect(color)"
+      [attr.aria-selected]="color === value ? 'true' : 'false'"
+    ></div>
+  </ng-container>
+</div>
