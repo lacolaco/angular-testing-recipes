@@ -2,7 +2,7 @@
 
 - Dynamic component loading
 - Dependency injection
-- Fake timers
+- Fake Async
 
 ## Testing dynamic loaded components
 
@@ -17,12 +17,12 @@ it('should show toast component in screen', () => {
 });
 ```
 
-## Testing with timeout
+## Testing with `fakeAsync`
 
 Use fake timers to simulate time-based behaviors.
 
 ```ts
-it('should dismiss a toast after 3s duration by default', () => {
+it('should dismiss a toast after 3s duration by default', fakeAsync(() => {
   const service = TestBed.inject(ToastService);
   service.show('TEXT');
 
@@ -30,17 +30,5 @@ it('should dismiss a toast after 3s duration by default', () => {
   expect(screen.getByText('TEXT')).toBeVisible();
   tick(1);
   expect(screen.queryByText('TEXT')).not.toBeInTheDocument();
-});
+}));
 ```
-
-### Integrate `fakeAsync` APIs with jest fake timers
-
-`jest-preset-angular` now doesn't support Angular's fake async integration in jest fake timers.
-
-See [\[Discussion\]Support jest\.useFakeTimers and fakeAsync\(\) · Issue \#520 · thymikee/jest\-preset\-angular](https://github.com/thymikee/jest-preset-angular/issues/520)
-
-**Workaround**
-
-- [angular\-testing\-recipes/jest\.config\.js](https://github.com/lacolaco/angular-testing-recipes/blob/main/jest.config.js)
-- [angular\-testing\-recipes/jest\-zone\.js](https://github.com/lacolaco/angular-testing-recipes/blob/main/jest/jest-zone.js)
-- [angular\-testing\-recipes/zone\-jsdom\-environment\.js](https://github.com/lacolaco/angular-testing-recipes/blob/main/jest/zone-jsdom-environment.js)
