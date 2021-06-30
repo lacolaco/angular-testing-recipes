@@ -3,6 +3,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
+    "allowJs": true,
     "types": ["jest"]
   },
   "files": ["src/setup-jest.ts"],
