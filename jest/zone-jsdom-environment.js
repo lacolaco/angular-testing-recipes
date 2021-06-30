@@ -11,11 +11,11 @@ const exportFakeTimersToSandboxGlobal = function (jestEnv) {
 class ZoneJsDOMEnvironment extends JsDOMEnvironment {
   constructor(config) {
     super(config);
-    exportFakeTimersToSandboxGlobal(this);
   }
 
   async setup() {
     await super.setup();
+    exportFakeTimersToSandboxGlobal(this);
   }
 
   async teardown() {
