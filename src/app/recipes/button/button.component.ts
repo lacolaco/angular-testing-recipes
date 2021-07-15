@@ -13,6 +13,13 @@ import {
     `
       :host {
         display: inline-block;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+        padding: 1rem 1.5rem;
+      }
+      :host-context(.app-button-stroked) {
+        border: 1px solid #333;
       }
     `,
   ],
