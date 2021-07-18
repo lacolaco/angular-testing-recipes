@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 env:
-  YARN_CACHE_FOLDER: .cache/yarn
+  CI: true
 
 jobs:
   test:
@@ -25,6 +25,5 @@ jobs:
         with:
           node-version: '14'
           cache: yarn
-      - run: yarn global add puppeteer
       - run: yarn install --frozen-lockfile
       - run: yarn vistest
