@@ -10,8 +10,13 @@
     "lint": "ng lint && stylelint 'src/**/*.css'",
     "lint:fix": "ng lint --fix && stylelint 'src/**/*.css' --fix",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
-    "storybook": "yarn docs:json && start-storybook -p 6006",
-    "build-storybook": "yarn docs:json && build-storybook"
+    "prestorybook": "yarn docs:json",
+    "storybook": "start-storybook -p 6006",
+    "prestorybook:build": "yarn prestorybook",
+    "storybook:build": "yarn docs:json && build-storybook",
+    "prestorybook:cap": "yarn prestorybook",
+    "storybook:cap": "storycap http://localhost:9009 --serverCmd \"start-storybook -p 9009\" --outDir spec/.storycap/screenshots",
+    "vistest": "yarn storybook:cap"
   },
   "private": true,
   "dependencies": {
@@ -62,6 +67,7 @@
     "jest": "^27.0.4",
     "jest-preset-angular": "^9.0.4",
     "prettier": "^2.3.1",
+    "storycap": "^3.0.4",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
