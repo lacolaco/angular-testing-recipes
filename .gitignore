@@ -41,6 +41,8 @@ testem.log
 /typings
 documentation.json
 storybook-static/
+vistest/.*
+vistest/report.html
 
 # System Files
 .DS_Store
