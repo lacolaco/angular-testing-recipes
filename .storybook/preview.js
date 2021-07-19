@@ -1,6 +1,6 @@
 import { setCompodocJson } from '@storybook/addon-docs/angular';
 import { withScreenshot } from 'storycap';
-import docJson from '../documentation.json';
+import docJson from './documentation.json';
 
 setCompodocJson(docJson);
 

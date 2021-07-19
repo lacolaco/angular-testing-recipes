@@ -9,11 +9,11 @@
     "test": "jest",
     "lint": "ng lint && stylelint 'src/**/*.css'",
     "lint:fix": "ng lint --fix && stylelint 'src/**/*.css' --fix",
-    "docs:json": "compodoc -p ./tsconfig.json -e json .",
+    "docs:json": "compodoc -p ./tsconfig.json -e json -d .storybook/",
     "prestorybook": "yarn docs:json",
     "storybook": "start-storybook -p 6006",
     "prestorybook:build": "yarn prestorybook",
-    "storybook:build": "yarn docs:json && build-storybook",
+    "storybook:build": "build-storybook",
     "prestorybook:cap": "yarn storybook:build",
     "storybook:cap": "storycap http://localhost:6007 --serverCmd \"npx http-server --port 6007 storybook-static\" --outDir spec/.storycap/screenshots",
     "vistest": "yarn storybook:cap"
