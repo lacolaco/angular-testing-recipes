@@ -14,9 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "prestorybook:build": "yarn prestorybook",
     "storybook:build": "build-storybook",
-    "prestorybook:cap": "yarn storybook:build",
-    "storybook:cap": "storycap http://localhost:6007 --serverCmd \"npx http-server --port 6007 storybook-static\" --outDir spec/.storycap/screenshots",
-    "vistest": "yarn storybook:cap"
+    "vistest": "./vistest/vistest.mjs"
   },
   "private": true,
   "dependencies": {
@@ -68,10 +66,12 @@
     "jest-preset-angular": "^9.0.4",
     "prettier": "^2.3.1",
     "puppeteer": "^10.1.0",
+    "reg-cli": "^0.17.0",
     "storycap": "^3.0.4",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
-    "typescript": "~4.2.3"
+    "typescript": "~4.2.3",
+    "zx": "^2.0.0"
   }
 }
