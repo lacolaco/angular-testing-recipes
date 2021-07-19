@@ -19,7 +19,7 @@ import {
         padding: 1rem 1.5rem;
       }
       :host-context(.app-button-stroked) {
-        border: 3px solid #333;
+        border: 1px solid #333;
       }
     `,
   ],
