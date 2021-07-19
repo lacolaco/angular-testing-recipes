@@ -2,7 +2,7 @@
 import { $, nothrow } from 'zx';
 
 const snapshotDir = 'vistest/snapshots';
-const reportPath = `vistest/report.html`;
+const reportPath = `vistest/index.html`;
 const workingDir = 'vistest/.tmp';
 const actualDir = `${workingDir}/actual`;
 const diffDir = `${workingDir}/diff`;

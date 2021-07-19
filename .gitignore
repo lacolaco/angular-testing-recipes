@@ -42,7 +42,7 @@ testem.log
 documentation.json
 storybook-static/
 vistest/.*
-vistest/report.html
+vistest/index.html
 
 # System Files
 .DS_Store
