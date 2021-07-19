@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 env:
-  YARN_CACHE_FOLDER: .cache/yarn
+  CI: true
 
 jobs:
   test:
@@ -17,3 +17,13 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn lint
       - run: yarn test
+  vistest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn vistest

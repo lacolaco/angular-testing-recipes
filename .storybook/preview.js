@@ -1,6 +1,12 @@
 import { setCompodocJson } from '@storybook/addon-docs/angular';
-import docJson from '../documentation.json';
+import { withScreenshot } from 'storycap';
+import docJson from './documentation.json';
+
 setCompodocJson(docJson);
+
+export const decorators = [
+  withScreenshot,
+];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,4 +17,7 @@ export const parameters = {
     },
   },
   docs: { inlineStories: true },
+  screenshot: {
+    viewport: 'iPhone 5',
+  },
 };
