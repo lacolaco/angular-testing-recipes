@@ -22,12 +22,14 @@ await $`yarn storybook:build`;
 await $`yarn storycap http://localhost:6007 --serverCmd \"npx http-server --port 6007 storybook-static\" --flat --outDir ${actualDir}`;
 
 // Run visual comparison
+const rate = 0.01;
+
+const job = $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json -T ${rate} ${
+  update ? '-U' : ''
+}`;
+
 if (check) {
-  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.01`;
-} else if (update) {
-  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.01 -U`;
+  await job;
 } else {
-  await nothrow(
-    $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.01`,
-  );
+  await nothrow(job);
 }
