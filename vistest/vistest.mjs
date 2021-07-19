@@ -8,6 +8,7 @@ const actualDir = `${workingDir}/actual`;
 const diffDir = `${workingDir}/diff`;
 
 const check = argv.check ?? false;
+const update = argv.update ?? false;
 
 console.log(`Check mode: ${check}`);
 
@@ -22,9 +23,11 @@ await $`yarn storycap http://localhost:6007 --serverCmd \"npx http-server --port
 
 // Run visual comparison
 if (check) {
-  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json`;
+  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.001`;
+} else if (update) {
+  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.001 -U`;
 } else {
   await nothrow(
-    $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json`,
+    $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.001`,
   );
 }
