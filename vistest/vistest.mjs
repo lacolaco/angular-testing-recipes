@@ -23,11 +23,11 @@ await $`yarn storycap http://localhost:6007 --serverCmd \"npx http-server --port
 
 // Run visual comparison
 if (check) {
-  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.1`;
+  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.01`;
 } else if (update) {
-  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.1 -U`;
+  await $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.01 -U`;
 } else {
   await nothrow(
-    $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.1`,
+    $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json --thresholdRate 0.01`,
   );
 }
