@@ -23,10 +23,9 @@ await $`yarn storycap http://localhost:6007 --serverCmd \"npx http-server --port
 
 // Run visual comparison
 const rate = 0.01;
+const updateFlag = update ? '-U' : '';
 
-const job = $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json -T ${rate} ${
-  update ? '-U' : ''
-}`;
+const job = $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -R ${reportPath} -J ${workingDir}/reg.json -T ${rate} ${updateFlag}`;
 
 if (check) {
   await job;
