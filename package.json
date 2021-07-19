@@ -15,7 +15,7 @@
     "prestorybook:build": "yarn prestorybook",
     "storybook:build": "yarn docs:json && build-storybook",
     "prestorybook:cap": "yarn prestorybook",
-    "storybook:cap": "storycap http://localhost:9009 --serverCmd \"start-storybook -p 9009 --ci\" --outDir spec/.storycap/screenshots --serverTimeout 30000",
+    "storybook:cap": "storycap http://localhost:6000 --serverCmd \"start-storybook -p 6000\" --outDir spec/.storycap/screenshots --serverTimeout 30000",
     "vistest": "yarn storybook:cap"
   },
   "private": true,
