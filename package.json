@@ -14,8 +14,9 @@
     "storybook": "start-storybook -p 6006",
     "prestorybook:build": "yarn prestorybook",
     "storybook:build": "build-storybook",
-    "vistest:check": "./vistest/vistest.mjs --check",
-    "vistest:update": "./vistest/vistest.mjs --update"
+    "vistest": "./vistest/vistest.mjs",
+    "vistest:check": "yarn vistest --check",
+    "vistest:update": "yarn vistest --update"
   },
   "private": true,
   "dependencies": {
