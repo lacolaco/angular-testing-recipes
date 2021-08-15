@@ -8,10 +8,19 @@ export default {
       imports: [TooltipModule],
     }),
   ],
+  parameters: {
+    screenshot: {
+      variants: {
+        hovered: {
+          hover: '#tooltipHost',
+        },
+      },
+    },
+  },
 } as Meta;
 
 export const SimpleUsage: Story<{ message: string }> = (args) => ({
-  template: `<div>Header</div><div [appTooltip]="message">Tooltip host</div><div>Footer</div>`,
+  template: `<div>Header</div><div id="tooltipHost" [appTooltip]="message">Tooltip host</div><div>Footer</div>`,
   props: args,
 });
 SimpleUsage.args = {

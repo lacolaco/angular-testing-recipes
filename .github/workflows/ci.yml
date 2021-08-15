@@ -25,4 +25,4 @@ jobs:
           node-version: '14'
           cache: yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn vistest --check
+      - run: yarn vistest:check
