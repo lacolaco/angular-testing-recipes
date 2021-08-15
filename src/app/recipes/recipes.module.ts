@@ -4,6 +4,7 @@ import { ButtonModule } from './button/button.module';
 import { CardModule } from './card/card.module';
 import { ColorpickerModule } from './colorpicker/colorpicker.module';
 import { ToastModule } from './toast/toast.module';
+import { TooltipModule } from './tooltip/tooltip.module';
 
 @NgModule({
   declarations: [],
@@ -13,6 +14,7 @@ import { ToastModule } from './toast/toast.module';
     AlertModule,
     ToastModule,
     ColorpickerModule,
+    TooltipModule,
   ],
 })
 export class RecipesModule {}

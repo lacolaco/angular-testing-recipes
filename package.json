@@ -14,7 +14,9 @@
     "storybook": "start-storybook -p 6006",
     "prestorybook:build": "yarn prestorybook",
     "storybook:build": "build-storybook",
-    "vistest": "./vistest/vistest.mjs"
+    "vistest": "./vistest/vistest.mjs",
+    "vistest:check": "yarn vistest --check",
+    "vistest:update": "yarn vistest --update"
   },
   "private": true,
   "dependencies": {
@@ -51,6 +53,7 @@
     "@storybook/manager-webpack5": "^6.3.4",
     "@testing-library/angular": "^10.8.2",
     "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^26.0.23",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.3",
