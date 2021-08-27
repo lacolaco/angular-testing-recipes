@@ -75,6 +75,6 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
     "typescript": "~4.2.3",
-    "zx": "^3.0.0"
+    "zx": "^4.0.0"
   }
 }
