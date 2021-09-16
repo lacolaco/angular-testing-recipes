@@ -10236,16 +10236,14 @@ jest-pnp-resolver@^1.2.2:
   resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
   integrity sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
 
-jest-preset-angular@^9.0.4:
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-9.0.4.tgz#d3a8dbc7902d6034ecf83122f5eb2e417fdea352"
-  integrity sha512-N/nPUwMXTW3bUiSzijn5vlQ51cuVEzJxDJ3s6EN8e3Wx2SF4Q9DBJIWpW+LVvSinLljYXJN9jPwkVstnnoJd9g==
+jest-preset-angular@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-10.0.0.tgz#31de62d25384a6408820c131e20f356ec0a9c178"
+  integrity sha512-y+wYe5/xRVabKH6XOllQth0TbuMLAMxxdyBoM28ICRC+2QcjEL3bpY/kohzj9qHBCzoBpqU7m6LSoSGKv9i9+g==
   dependencies:
     jest-environment-jsdom "^27.0.0"
     pretty-format "^27.0.0"
     ts-jest "^27.0.0"
-  optionalDependencies:
-    webpack "^4.0.0 || ^5.30.0"
 
 jest-regex-util@^26.0.0:
   version "26.0.0"
@@ -16915,7 +16913,7 @@ webpack@4:
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
-webpack@5.39.1, "webpack@^4.0.0 || ^5.30.0":
+webpack@5.39.1:
   version "5.39.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.39.1.tgz#d1e014b6d71e1aef385316ad528f21cd5b1f9784"
   integrity sha512-ulOvoNCh2PvTUa+zbpRuEb1VPeQnhxpnHleMPVVCq3QqnaFogjsLyps+o42OviQFoaGtTQYrUqDXu1QNkvUPzw==
