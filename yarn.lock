@@ -126,46 +126,54 @@
     ora "5.4.0"
     rxjs "6.6.7"
 
-"@angular-eslint/builder@12.3.1":
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-12.3.1.tgz#e0a6768a9c7ee23623b1e363a23e59a333b6dabe"
-  integrity sha512-Py7Y9n0evIWGgEIrnMaLvalE1+Nw9HoY+fcYLYd9POfY0cug8j7hbkoPQ6rM7GzNHVcVsqEi/8C4DoF7RXXNRg==
+"@angular-eslint/builder@12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-12.5.0.tgz#e53946ffe9873579ff2a9ce46d3b7e44ea62905d"
+  integrity sha512-abex1KdqEvUYbJqLkqhEeW4r0DuJPDzlMZYODMyBDDFTcBFYQCzLFUkhIjRNet9Vjto3Y3DbkkFUfS4DEEwjTw==
   dependencies:
-    "@nrwl/devkit" ">= 12.0.0 < 13.0.0"
+    "@nrwl/devkit" "12.6.0"
 
-"@angular-eslint/eslint-plugin-template@12.3.1":
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-12.3.1.tgz#33260cd5356df5db7e27719443eabcf6c214e32e"
-  integrity sha512-pz+nO64ma/9Sp2aeRnQ+Vktt7Fo1Lay/J+CG//3TIc3lYsoCTj4h42P6yCcxxJ9b4N7SUxMAnchA8eE5mJS4Ug==
+"@angular-eslint/eslint-plugin-template@12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-12.5.0.tgz#9b77647c7d850a956d4e2fc8343230f3076e5892"
+  integrity sha512-qvgJieWFiK61kyuGPbRWBBmsP2J/bRjYply/aAuqpctnlLnae1/+GCsosWWP/AzOlR2TvHN62j7ZW6GSxTkUOg==
   dependencies:
     "@typescript-eslint/experimental-utils" "4.28.2"
     aria-query "^4.2.2"
     axobject-query "^2.2.0"
 
-"@angular-eslint/eslint-plugin@12.3.1":
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin/-/eslint-plugin-12.3.1.tgz#00ac44d5986d86113d65a5373746e1fc22fd8702"
-  integrity sha512-KBm27onYggRcusA/BxuSkDGpVnIs8yG4ARio8ZAhe0H2XIRJTzJZ7oIBBjugDau03AGX3VMG6wAXailjJvsywg==
+"@angular-eslint/eslint-plugin@12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin/-/eslint-plugin-12.5.0.tgz#cb4eca50338bf41398bd62796c1068b937ff53a1"
+  integrity sha512-BugzzvgghcaxHMvUFQBdu6dwB167CwiTxjIBT9KxIYYm0IY3RUKiyVQDdSs4tcwZqsyWNWuiju4ZfGPNHGjcWw==
   dependencies:
+    "@angular-eslint/utils" "12.5.0"
     "@typescript-eslint/experimental-utils" "4.28.2"
 
-"@angular-eslint/schematics@12.3.1":
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/schematics/-/schematics-12.3.1.tgz#99060a64fd6dd36ffb4c5e254b85562f4d0150d9"
-  integrity sha512-r1yZaqyO0oJhKDIWio3gH9TWpWEN8bUpiftgkkR6Yyc4hKBbiR5N4RQo5aZ5bnGytdW8QP8zq2k1yYBWjhEX7A==
+"@angular-eslint/schematics@12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/schematics/-/schematics-12.5.0.tgz#bbfe5f543f26ddb38727163a7426fcd99572b282"
+  integrity sha512-918oLA4Z/sQl/WWzeQNPmy23VgU1fAdlqKnZmBWFE6Mrpstoa8emX9dIl4mbQT1UbS9XtzI2OglmbX2lQR0jRw==
   dependencies:
-    "@angular-eslint/eslint-plugin" "12.3.1"
-    "@angular-eslint/eslint-plugin-template" "12.3.1"
+    "@angular-eslint/eslint-plugin" "12.5.0"
+    "@angular-eslint/eslint-plugin-template" "12.5.0"
     ignore "5.1.8"
     strip-json-comments "3.1.1"
     tmp "0.2.1"
 
-"@angular-eslint/template-parser@12.3.1":
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/template-parser/-/template-parser-12.3.1.tgz#561fe1bd3fb4a4d75cc55366d27818bca22204c9"
-  integrity sha512-6DkXqTaVEHZdcN3isHQ2CDoTsKLuJ5C1SYEOuFzOU1Zp85SvjxO92v6gPkFPKk0iQNVRmQS2XcKef6weehUUGA==
+"@angular-eslint/template-parser@12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/template-parser/-/template-parser-12.5.0.tgz#e4cade69ce485eba9f6b7f9fdcabfb6516d4ef25"
+  integrity sha512-aAcwoy0X6B2IUvuH6i0zK7leKqM1Lx3QqzFI2gyOWLIgtT81182Wm0VT+3GWwr4pudw+L6n4NhDVDvxBkRJFtA==
   dependencies:
     eslint-scope "^5.1.0"
+
+"@angular-eslint/utils@12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/utils/-/utils-12.5.0.tgz#9e1164de3ceffc1b79d24bd5e5788d6bb63bc905"
+  integrity sha512-h3ayDMxndrWRwX4sSe3Xs4QpGz+wIa6cAYtDKGu3H9HPlEacQCkKkTPCDy1d+993iL+9XynWIKuNCK9pX9YHgA==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "4.28.2"
 
 "@angular/animations@~12.0.5":
   version "12.0.5"
@@ -2220,21 +2228,22 @@
     node-gyp "^7.1.0"
     read-package-json-fast "^2.0.1"
 
-"@nrwl/devkit@>= 12.0.0 < 13.0.0":
-  version "12.5.7"
-  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.5.7.tgz#9f49ae2b884f0b440bda79ffedfae984c878827f"
-  integrity sha512-zVH8edxO59GeOzmwcw6qBpQVT0yX9aHdhP5/XAUgPOYINdHIDMy1IZHyhb19fefT4Ju6wUil+1L9g9KvUpULcw==
+"@nrwl/devkit@12.6.0":
+  version "12.6.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.6.0.tgz#a2bdd4c144f05597302580bcf31443abdd9dc6be"
+  integrity sha512-tvw/4n2JD/38UuzdxFCoj1+x02BAKK4EvtLhwUK5XSBF0wDYFBp5rHfxvUD9ZcoiRRrZA4QGFjhDljrfj95F2A==
   dependencies:
-    "@nrwl/tao" "12.5.7"
+    "@nrwl/tao" "12.6.0"
     ejs "^3.1.5"
     ignore "^5.0.4"
+    rxjs "^6.5.4"
     semver "7.3.4"
     tslib "^2.0.0"
 
-"@nrwl/tao@12.5.7":
-  version "12.5.7"
-  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.5.7.tgz#007e0ee743230cbfc18eae8aabba2aace8b3488d"
-  integrity sha512-H3kxmbPxYV3qG8TkjjqyLFVBW6Np1Ft3+iaoXr0Agh88I3oJhuxVFKHdclahAVGy76VtVjvnXr8lc4J9/6E0cA==
+"@nrwl/tao@12.6.0":
+  version "12.6.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.6.0.tgz#b0ef91cbc0a8b7747407d1f25b0be669d9a8ddc7"
+  integrity sha512-h6X+mqmTlZjA9nqlyPAu9TFNORHAMcC1BD8H8kA8lTHN1nktLHQ266qpHVLsxcqww2EYsVqQaKaOpUacck49+w==
   dependencies:
     chalk "4.1.0"
     enquirer "~2.3.6"
