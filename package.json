@@ -66,7 +66,7 @@
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.4",
-    "jest-preset-angular": "^10.0.0",
+    "jest-preset-angular": "^11.0.0",
     "prettier": "^2.3.1",
     "puppeteer": "^10.1.0",
     "reg-cli": "^0.17.0",
