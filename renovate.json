@@ -3,6 +3,7 @@
   "extends": ["local>lacolaco/renovate-config"],
   "packageRules": [
     {
+      "groupName": "stylelint packages",
       "matchSourceUrlPrefixes": ["https://github.com/stylelint/"]
     }
   ]
