@@ -51,7 +51,7 @@
     "@storybook/angular": "^6.5.9",
     "@storybook/builder-webpack5": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
-    "@testing-library/angular": "^11.0.0",
+    "@testing-library/angular": "^12.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^28.0.0",

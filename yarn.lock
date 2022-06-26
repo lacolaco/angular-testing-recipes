@@ -4416,13 +4416,13 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
-"@testing-library/angular@^11.0.0":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-11.0.2.tgz#268ca52a4881c7503915b2409fbcaefc873b9116"
-  integrity sha512-sqOD9MzTZ/sIXzCj5ogJm72x+iveWU+Q3vu2hZW5YC89YJV+M4w6PuBo0wgqpsyL4xnktVf41vNJcLMkajUjZw==
+"@testing-library/angular@^12.0.0":
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-12.0.2.tgz#b2cfce1090759ed12775f092e08ce1f40d4a7537"
+  integrity sha512-iNm2UvX2tOtz1EOI7UiFRowRUIh1HDkahhAERF9wB6mcIix2RF/ivw1BqOAzRtYY+nsTbTc/gXhz1KAczbyjHQ==
   dependencies:
     "@testing-library/dom" "^8.0.0"
-    tslib "^2.0.0"
+    tslib "^2.3.1"
 
 "@testing-library/dom@^8.0.0":
   version "8.11.3"
@@ -17223,7 +17223,7 @@ tslib@2.3.1, tslib@^2.3.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
-tslib@2.4.0, tslib@^2.4.0:
+tslib@2.4.0, tslib@^2.3.1, tslib@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
