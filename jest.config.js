@@ -1,4 +1,4 @@
-require('jest-preset-angular/ngcc-jest-processor');
+require('jest-preset-angular/global-setup');
 
 module.exports = {
   preset: 'jest-preset-angular',
