@@ -7,7 +7,6 @@ This project is a collection of testing examples of Angular applications and lib
 - [Angular ESLint](https://github.com/angular-eslint/angular-eslint)
 - [Stylelint](https://stylelint.io/)
 - [Prettier](https://prettier.io/)
-- [Jest](https://jestjs.io/)
 - [Angular Testing Library](https://github.com/testing-library/angular-testing-library)
 
 ## Recipes
