@@ -44,7 +44,7 @@ describe('AlertComponent', () => {
     });
 
     it('should emit (closed) event', async () => {
-      const onClosed = jest.fn();
+      const onClosed = jasmine.createSpy();
       const { getByRole } = await render(
         `<app-alert dismissible (closed)="onClosed($event)">TEXT</app-alert>`,
         {
