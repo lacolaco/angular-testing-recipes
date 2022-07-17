@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { TooltipModule } from './tooltip.module';
 
 describe('TooltipDirective', () => {
-  test('[appTooltip] does not show message in the DOM by default', async () => {
+  it('[appTooltip] does not show message in the DOM by default', async () => {
     const message = 'This is a tooltip';
     const { queryByText } = await render(
       `<div [appTooltip]="message">HOST</div>`,
@@ -16,7 +16,7 @@ describe('TooltipDirective', () => {
     expect(queryByText(message)).toBeNull();
   });
 
-  test('[appTooltip] show message in the DOM while hovering on the host element', async () => {
+  it('[appTooltip] show message in the DOM while hovering on the host element', async () => {
     const message = 'This is a tooltip';
     const { getByText, queryByText } = await render(
       `<div [appTooltip]="message">HOST</div>`,

@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*", "jest/**/*"],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -33,11 +33,7 @@
       }
     },
     {
-      "files": ["*.spec.ts"],
-      "extends": ["plugin:jest/recommended"]
-    },
-    {
-      "files": ["*.mjs"],
+      "files": ["*.js", "*.mjs"],
       "parser": "@babel/eslint-parser",
       "parserOptions": {
         "ecmaVersion": 2021,

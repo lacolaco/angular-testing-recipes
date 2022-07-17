@@ -22,29 +22,29 @@ describe('ApiService', () => {
     httpController.verify();
   });
 
-  test('service is created', () => {
+  it('service is created', () => {
     expect(service).toBeTruthy();
   });
 
-  test('getRecipes() makes GET request to "/api/recipes"', () => {
+  it('getRecipes() makes GET request to "/api/recipes"', () => {
     service.getRecipes();
 
     const req = httpController.expectOne('/api/recipes');
     expect(req.request.method).toBe('GET');
   });
 
-  test('getRecipes() retrieves recipes from response json', async () => {
+  it('getRecipes() retrieves recipes from response json', async () => {
     const data = [
       { id: 1, name: 'recipe1' },
       { id: 2, name: 'recipe2' },
     ];
-    const callback = jest.fn();
+    const callback = jasmine.createSpy();
 
-    service.getRecipes().then(callback);
+    const promise = service.getRecipes().then(callback);
 
     const req = httpController.expectOne('/api/recipes');
     req.flush({ data });
 
-    await waitFor(() => expect(callback).toHaveBeenCalledWith(data));
+    await promise.then(() => expect(callback).toHaveBeenCalledWith(data));
   });
 });

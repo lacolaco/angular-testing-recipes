@@ -74,7 +74,7 @@ describe('ColorpickerComponent', () => {
   });
 
   it('should emit (valueChange) event on click a color option', async () => {
-    const onChange = jest.fn();
+    const onChange = jasmine.createSpy();
     const { getByTitle } = await render(
       `<app-colorpicker [colors]="colors" (valueChange)="onChange($event)"></app-colorpicker>`,
       {
@@ -84,7 +84,7 @@ describe('ColorpickerComponent', () => {
     );
     getByTitle('#fff').click();
 
-    expect(onChange).toBeCalledWith('#fff');
+    expect(onChange).toHaveBeenCalledWith('#fff');
   });
 
   describe('with Angular Forms', () => {
