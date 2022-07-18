@@ -9,6 +9,10 @@ This project is a collection of testing examples of Angular applications and lib
 - [Prettier](https://prettier.io/)
 - [Angular Testing Library](https://github.com/testing-library/angular-testing-library)
 
+## Live example
+
+**Live example is available on [StackBlitz](https://stackblitz.com/edit/node-wvkgli?file=README.md)!**
+
 ## Run tests
 
 - `yarn install`
