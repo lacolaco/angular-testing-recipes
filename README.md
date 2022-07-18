@@ -9,6 +9,11 @@ This project is a collection of testing examples of Angular applications and lib
 - [Prettier](https://prettier.io/)
 - [Angular Testing Library](https://github.com/testing-library/angular-testing-library)
 
+## Run tests
+
+- `yarn install`
+- `yarn test`
+
 ## Recipes
 
 See [recipes directory](https://github.com/lacolaco/angular-testing-recipes/tree/main/src/app/recipes).
