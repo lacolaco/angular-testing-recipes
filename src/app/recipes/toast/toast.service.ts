@@ -13,10 +13,7 @@ export class ToastService {
     overlay: OverlayRef;
   } | null = null;
 
-  constructor(
-    private readonly overlay: Overlay,
-    private readonly injector: Injector,
-  ) {}
+  constructor(private readonly overlay: Overlay, private readonly injector: Injector) {}
 
   show(message: string, options: { durationMs?: number } = {}) {
     const context = new ToastContext(message);
@@ -48,11 +45,7 @@ export class ToastService {
   }
 
   private createOverlay() {
-    const positionStrategy = this.overlay
-      .position()
-      .global()
-      .centerHorizontally()
-      .bottom();
+    const positionStrategy = this.overlay.position().global().centerHorizontally().bottom();
     return this.overlay.create({
       positionStrategy,
     });

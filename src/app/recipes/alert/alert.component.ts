@@ -9,26 +9,13 @@ import {
 } from '@angular/core';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
-type AlertContext =
-  | 'primary'
-  | 'secondary'
-  | 'danger'
-  | 'warning'
-  | 'success'
-  | 'info';
+type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' | 'info';
 
 @Component({
   selector: 'app-alert',
   template: `
     <ng-content></ng-content>
-    <button
-      *ngIf="dismissible"
-      (click)="close()"
-      type="button"
-      aria-label="Close"
-    >
-      x
-    </button>
+    <button *ngIf="dismissible" (click)="close()" type="button" aria-label="Close">x</button>
   `,
   styles: [
     `

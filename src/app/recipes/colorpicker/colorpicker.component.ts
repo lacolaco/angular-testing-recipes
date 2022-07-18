@@ -50,18 +50,13 @@ export class ColorpickerComponent implements ControlValueAccessor {
   }
 
   get selectedOptionId(): string | null {
-    const selectedColorIndex = this.colors.findIndex(
-      (color) => color === this.value,
-    );
+    const selectedColorIndex = this.colors.findIndex((color) => color === this.value);
     return selectedColorIndex < 0 ? null : this.getOptionId(selectedColorIndex);
   }
 
   private _uid = `app-colorpicker-${nextUniqueId++}`;
 
-  constructor(
-    private readonly cdRef: ChangeDetectorRef,
-    @Optional() ngControl: NgControl,
-  ) {
+  constructor(private readonly cdRef: ChangeDetectorRef, @Optional() ngControl: NgControl) {
     if (ngControl) {
       ngControl.valueAccessor = this;
     }

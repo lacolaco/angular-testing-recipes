@@ -6,9 +6,7 @@ describe('ToastComponent', () => {
   it('should render given message from context', async () => {
     const { container } = await render(ToastComponent, {
       imports: [NoopAnimationsModule],
-      providers: [
-        { provide: ToastContext, useValue: new ToastContext('TEXT') },
-      ],
+      providers: [{ provide: ToastContext, useValue: new ToastContext('TEXT') }],
     });
 
     expect(container).toHaveTextContent('TEXT');

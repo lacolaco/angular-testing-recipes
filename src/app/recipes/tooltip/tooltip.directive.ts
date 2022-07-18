@@ -45,10 +45,7 @@ export class TooltipDirective {
   private readonly contentFactory: ComponentFactory<TooltipComponent>;
   private tooltipInstance: ComponentRef<TooltipComponent> | null = null;
 
-  constructor(
-    cfr: ComponentFactoryResolver,
-    private readonly vcRef: ViewContainerRef,
-  ) {
+  constructor(cfr: ComponentFactoryResolver, private readonly vcRef: ViewContainerRef) {
     this.contentFactory = cfr.resolveComponentFactory(TooltipComponent);
   }
 

@@ -12,14 +12,11 @@ describe('ButtonComponent', () => {
 
   describe('appearance', () => {
     it('should render a stroked button', async () => {
-      const { getByRole } = await render(
-        `<button app-button appearance="stroked">TEXT</button>`,
-        { declarations: [ButtonComponent] },
-      );
+      const { getByRole } = await render(`<button app-button appearance="stroked">TEXT</button>`, {
+        declarations: [ButtonComponent],
+      });
 
-      expect(getByRole('button', { name: 'TEXT' })).toHaveClass(
-        'app-button-stroked',
-      );
+      expect(getByRole('button', { name: 'TEXT' })).toHaveClass('app-button-stroked');
     });
   });
 });

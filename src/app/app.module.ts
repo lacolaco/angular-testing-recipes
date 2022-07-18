@@ -8,12 +8,7 @@ import { RecipesModule } from './recipes/recipes.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    RecipesModule,
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, RecipesModule],
   providers: [],
   bootstrap: [AppComponent],
 })

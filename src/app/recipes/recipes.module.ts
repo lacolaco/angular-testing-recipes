@@ -8,13 +8,6 @@ import { TooltipModule } from './tooltip/tooltip.module';
 
 @NgModule({
   declarations: [],
-  exports: [
-    CardModule,
-    ButtonModule,
-    AlertModule,
-    ToastModule,
-    ColorpickerModule,
-    TooltipModule,
-  ],
+  exports: [CardModule, ButtonModule, AlertModule, ToastModule, ColorpickerModule, TooltipModule],
 })
 export class RecipesModule {}

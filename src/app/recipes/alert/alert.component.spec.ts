@@ -14,28 +14,21 @@ describe('AlertComponent', () => {
 
   describe('dismissible alert', () => {
     it('should render an alertdialog', async () => {
-      const { getByRole } = await render(
-        `<app-alert dismissible>TEXT</app-alert>`,
-        { declarations: [AlertComponent] },
-      );
+      const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { declarations: [AlertComponent] });
 
       expect(getByRole('alertdialog')).toHaveTextContent('TEXT');
     });
 
     it('should have a close button', async () => {
-      const { getByRole } = await render(
-        `<app-alert dismissible>TEXT</app-alert>`,
-        { declarations: [AlertComponent] },
-      );
+      const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { declarations: [AlertComponent] });
 
       expect(getByRole('button', { name: /Close/i })).toBeInTheDocument();
     });
 
     it('should dismiss after close button click', async () => {
-      const { getByRole, queryByRole } = await render(
-        `<app-alert dismissible>TEXT</app-alert>`,
-        { declarations: [AlertComponent] },
-      );
+      const { getByRole, queryByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, {
+        declarations: [AlertComponent],
+      });
       getByRole('button', { name: /Close/i }).click();
 
       await waitFor(() => {
@@ -45,13 +38,10 @@ describe('AlertComponent', () => {
 
     it('should emit (closed) event', async () => {
       const onClosed = jasmine.createSpy();
-      const { getByRole } = await render(
-        `<app-alert dismissible (closed)="onClosed($event)">TEXT</app-alert>`,
-        {
-          declarations: [AlertComponent],
-          componentProperties: { onClosed },
-        },
-      );
+      const { getByRole } = await render(`<app-alert dismissible (closed)="onClosed($event)">TEXT</app-alert>`, {
+        declarations: [AlertComponent],
+        componentProperties: { onClosed },
+      });
       getByRole('button', { name: /Close/i }).click();
 
       expect(onClosed).toHaveBeenCalled();
