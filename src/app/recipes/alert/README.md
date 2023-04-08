@@ -5,16 +5,18 @@
 
 ## Testing with click event
 
-Get a button reference and call `click()`.
+Get a button reference and call `userEvent.click()`.
 Wait for disappearing the element.
 
 ```ts
+import userEvent from '@testing-library/user-event';
+
 it('should dismiss after close button click', async () => {
   const { getByRole, queryByRole } = await render(
     `<app-alert dismissible>TEXT</app-alert>`,
-    { declarations: [AlertComponent] },
+    { imports: [AlertComponent] },
   );
-  getByRole('button', { name: /Close/i }).click();
+  await userEvent.click(getByRole('button', { name: /Close/i }));
 
   await waitFor(() => {
     expect(queryByRole('alertdialog')).not.toBeInTheDocument();
@@ -32,11 +34,11 @@ it('should emit (closed) event', async () => {
   const { getByRole } = await render(
     `<app-alert dismissible (closed)="onClosed($event)">TEXT</app-alert>`,
     {
-      declarations: [AlertComponent],
+      imports: [AlertComponent],
       componentProperties: { onClosed },
     },
   );
-  getByRole('button', { name: /Close/i }).click();
+  await userEvent.click(getByRole('button', { name: /Close/i }));
 
   expect(onClosed).toHaveBeenCalled();
 });

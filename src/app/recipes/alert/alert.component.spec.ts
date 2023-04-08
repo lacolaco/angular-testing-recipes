@@ -1,10 +1,11 @@
 import { render, waitFor } from '@testing-library/angular';
 import { AlertComponent } from './alert.component';
+import userEvent from '@testing-library/user-event';
 
 describe('AlertComponent', () => {
   it('should render an alert', async () => {
     const { getByRole } = await render(`<app-alert>TEXT</app-alert>`, {
-      declarations: [AlertComponent],
+      imports: [AlertComponent],
     });
 
     expect(getByRole('alert')).toHaveTextContent('TEXT');
@@ -14,22 +15,23 @@ describe('AlertComponent', () => {
 
   describe('dismissible alert', () => {
     it('should render an alertdialog', async () => {
-      const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { declarations: [AlertComponent] });
+      const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { imports: [AlertComponent] });
 
       expect(getByRole('alertdialog')).toHaveTextContent('TEXT');
     });
 
     it('should have a close button', async () => {
-      const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { declarations: [AlertComponent] });
+      const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { imports: [AlertComponent] });
 
       expect(getByRole('button', { name: /Close/i })).toBeInTheDocument();
     });
 
     it('should dismiss after close button click', async () => {
       const { getByRole, queryByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, {
-        declarations: [AlertComponent],
+        imports: [AlertComponent],
       });
-      getByRole('button', { name: /Close/i }).click();
+
+      await userEvent.click(getByRole('button', { name: /Close/i }));
 
       await waitFor(() => {
         expect(queryByRole('alertdialog')).not.toBeInTheDocument();
@@ -39,10 +41,11 @@ describe('AlertComponent', () => {
     it('should emit (closed) event', async () => {
       const onClosed = jasmine.createSpy();
       const { getByRole } = await render(`<app-alert dismissible (closed)="onClosed($event)">TEXT</app-alert>`, {
-        declarations: [AlertComponent],
+        imports: [AlertComponent],
         componentProperties: { onClosed },
       });
-      getByRole('button', { name: /Close/i }).click();
+
+      await userEvent.click(getByRole('button', { name: /Close/i }));
 
       expect(onClosed).toHaveBeenCalled();
     });

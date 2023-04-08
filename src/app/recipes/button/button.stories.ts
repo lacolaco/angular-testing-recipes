@@ -1,11 +1,10 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
-import { ButtonModule } from './button.module';
 
 export default {
   title: 'Button',
   component: ButtonComponent,
-  decorators: [moduleMetadata({ imports: [ButtonModule] })],
+  decorators: [moduleMetadata({ imports: [ButtonComponent] })],
 } as Meta;
 
 export const defaultButton: Story<ButtonComponent> = (args) => ({

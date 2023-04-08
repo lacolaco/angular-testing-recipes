@@ -1,3 +1,5 @@
+import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -7,7 +9,6 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' | 'info';
 
@@ -30,6 +31,8 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
     '[style.display]': 'isClosed ? "none" : "block"',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgIf],
 })
 export class AlertComponent {
   /**
@@ -43,7 +46,7 @@ export class AlertComponent {
     return this._dismissible;
   }
 
-  set dismissible(value: boolean) {
+  set dismissible(value: BooleanInput) {
     this._dismissible = coerceBooleanProperty(value);
     this.cdRef.markForCheck();
   }
@@ -66,6 +69,4 @@ export class AlertComponent {
     this.closed.emit();
     this.cdRef.markForCheck();
   }
-
-  static ngAcceptInputType_dismissible: BooleanInput;
 }

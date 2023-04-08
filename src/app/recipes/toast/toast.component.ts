@@ -30,6 +30,7 @@ export class ToastContext {
     '[@state]': 'animationState',
     '(@state.done)': 'onAnimationDone($event)',
   },
+  standalone: true,
 })
 export class ToastComponent implements OnDestroy {
   animationState = 'void';

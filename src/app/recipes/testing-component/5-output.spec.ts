@@ -9,6 +9,7 @@ import { screen, render, fireEvent } from '@testing-library/angular';
       <button (click)="close()">Close</button>
     </div>
   `,
+  standalone: true,
 })
 export class ToastComponent {
   @Input() message = '';
@@ -22,7 +23,7 @@ export class ToastComponent {
 describe('ToastComponent', () => {
   it('should render passed message', async () => {
     await render(`<app-toast [message]="message"></app-toast>`, {
-      declarations: [ToastComponent],
+      imports: [ToastComponent],
       componentProperties: { message: 'Test Message' },
     });
 
@@ -32,7 +33,7 @@ describe('ToastComponent', () => {
   it('should emit (closed) on "Close" button click', async () => {
     const onClosed = jasmine.createSpy();
     await render(`<app-toast [message]="message" (closed)="onClosed()"></app-toast>`, {
-      declarations: [ToastComponent],
+      imports: [ToastComponent],
       componentProperties: { message: 'Test Message', onClosed },
     });
 

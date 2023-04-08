@@ -1,11 +1,11 @@
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { render } from '@testing-library/angular';
-import { ColorpickerModule } from './colorpicker.module';
+import { ColorpickerComponent } from './colorpicker.component';
 
 describe('ColorpickerComponent', () => {
   it('should show a listbox for colors', async () => {
     const { getByRole } = await render(`<app-colorpicker></app-colorpicker>`, {
-      imports: [ColorpickerModule],
+      imports: [ColorpickerComponent],
     });
     expect(getByRole('listbox')).toBeInTheDocument();
   });
@@ -13,7 +13,7 @@ describe('ColorpickerComponent', () => {
   it('should show the color options', async () => {
     const colors = ['#fff', '#eee'];
     const { getAllByRole } = await render(`<app-colorpicker [colors]="colors"></app-colorpicker>`, {
-      imports: [ColorpickerModule],
+      imports: [ColorpickerComponent],
       componentProperties: { colors },
     });
     expect(getAllByRole('option').map((el) => el.title)).toEqual(colors);
@@ -21,7 +21,7 @@ describe('ColorpickerComponent', () => {
 
   it('should set selected color empty by default', async () => {
     const { queryAllByRole, getByRole } = await render(`<app-colorpicker [colors]="colors"></app-colorpicker>`, {
-      imports: [ColorpickerModule],
+      imports: [ColorpickerComponent],
       componentProperties: { colors: ['#fff', '#eee'] },
     });
     expect(queryAllByRole('option', { selected: true }).length).toBe(0);
@@ -32,7 +32,7 @@ describe('ColorpickerComponent', () => {
     const { getByTitle, queryAllByRole, getByRole, detectChanges } = await render(
       `<app-colorpicker [colors]="colors"></app-colorpicker>`,
       {
-        imports: [ColorpickerModule],
+        imports: [ColorpickerComponent],
         componentProperties: { colors: ['#fff', '#eee'] },
       },
     );
@@ -48,7 +48,7 @@ describe('ColorpickerComponent', () => {
     const { getByRole, change } = await render(
       `<app-colorpicker [colors]="colors" [value]="selectedValue"></app-colorpicker>`,
       {
-        imports: [ColorpickerModule],
+        imports: [ColorpickerComponent],
         componentProperties: {
           colors: ['#fff', '#eee'],
           selectedValue: '#eee',
@@ -65,7 +65,7 @@ describe('ColorpickerComponent', () => {
     const { getByTitle } = await render(
       `<app-colorpicker [colors]="colors" (valueChange)="onChange($event)"></app-colorpicker>`,
       {
-        imports: [ColorpickerModule],
+        imports: [ColorpickerComponent],
         componentProperties: { colors: ['#fff', '#eee'], onChange },
       },
     );
@@ -80,7 +80,7 @@ describe('ColorpickerComponent', () => {
       const { getByRole } = await render(
         `<app-colorpicker [colors]="colors" [formControl]="formControl"></app-colorpicker>`,
         {
-          imports: [ColorpickerModule, ReactiveFormsModule],
+          imports: [ColorpickerComponent, ReactiveFormsModule],
           componentProperties: {
             colors: ['#fff', '#eee'],
             formControl,
@@ -95,7 +95,7 @@ describe('ColorpickerComponent', () => {
       const { getByTitle } = await render(
         `<app-colorpicker [colors]="colors" [formControl]="formControl"></app-colorpicker>`,
         {
-          imports: [ColorpickerModule, ReactiveFormsModule],
+          imports: [ColorpickerComponent, ReactiveFormsModule],
           componentProperties: {
             colors: ['#fff', '#eee'],
             formControl,
@@ -111,7 +111,7 @@ describe('ColorpickerComponent', () => {
       const { change } = await render(
         `<app-colorpicker [colors]="colors" [value]="selectedColor" [formControl]="formControl"></app-colorpicker>`,
         {
-          imports: [ColorpickerModule, ReactiveFormsModule],
+          imports: [ColorpickerComponent, ReactiveFormsModule],
           componentProperties: {
             colors: ['#fff', '#eee'],
             selectedColor: null as string | null,

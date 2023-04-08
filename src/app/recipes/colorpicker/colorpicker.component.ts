@@ -1,11 +1,12 @@
+import { NgFor } from '@angular/common';
 import {
-  Component,
   ChangeDetectionStrategy,
-  Input,
   ChangeDetectorRef,
-  Output,
+  Component,
   EventEmitter,
+  Input,
   Optional,
+  Output,
 } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 
@@ -24,6 +25,8 @@ let nextUniqueId = 0;
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgFor],
 })
 export class ColorpickerComponent implements ControlValueAccessor {
   @Input()
