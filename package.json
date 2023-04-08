@@ -69,7 +69,7 @@
     "puppeteer": "^19.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reg-cli": "^0.17.0",
+    "reg-cli": "^0.17.7",
     "storybook": "^7.0.2",
     "storycap": "^4.0.0",
     "stylelint": "^14.9.0",
