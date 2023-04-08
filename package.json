@@ -71,7 +71,7 @@
     "react-dom": "^18.2.0",
     "reg-cli": "^0.17.0",
     "storybook": "^7.0.2",
-    "storycap": "^3.0.4",
+    "storycap": "^4.0.0",
     "stylelint": "^14.9.0",
     "stylelint-config-standard": "^26.0.0",
     "stylelint-prettier": "^2.0.0",
