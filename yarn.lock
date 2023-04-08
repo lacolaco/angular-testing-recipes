@@ -3375,10 +3375,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/pngjs@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@types/pngjs/-/pngjs-3.4.2.tgz#8dc49b45fbcf18a5873179e3664f049388e39ecf"
-  integrity sha512-LJVPDraJ5YFEnMHnzxTN4psdWz1M61MtaAAWPn3qnDk5fvs7BAmmQ9pd3KPlrdrvozMyne4ktanD4pg0L7x1Pw==
+"@types/pngjs@^6.0.0":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@types/pngjs/-/pngjs-6.0.1.tgz#c711ec3fbbf077fed274ecccaf85dd4673130072"
+  integrity sha512-J39njbdW1U/6YyVXvC9+1iflZghP8jgRf2ndYghdJb5xL49LYDB+1EuAxfbuJ2IBbWIL3AjHPQhgaTxT3YaYeg==
   dependencies:
     "@types/node" "*"
 
@@ -4783,14 +4783,6 @@ case-sensitive-paths-webpack-plugin@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz#db64066c6422eed2e08cc14b986ca43796dbc6d4"
   integrity sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==
-
-chalk@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
-  integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
-  dependencies:
-    ansi-styles "^4.1.0"
-    supports-color "^7.1.0"
 
 chalk@4.1.2, chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.2:
   version "4.1.2"
@@ -7140,10 +7132,10 @@ glob-to-regexp@^0.4.1:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
 
-glob@7.1.6:
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
-  integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
+glob@7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
+  integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -7709,20 +7701,20 @@ image-size@~0.5.0:
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
   integrity sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=
 
-img-diff-js@0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/img-diff-js/-/img-diff-js-0.5.1.tgz#4490fe198832dbb55958fd2576cb35138bf7f57b"
-  integrity sha512-znFsjy9tyD+9w8fiL5u9GyS8pmxFHSpjdtgFedkQwUHW7Rok5zHyj9qdM4PkxpkSnt+0NXNR4KgnpwsCFmrqPQ==
+img-diff-js@0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/img-diff-js/-/img-diff-js-0.5.2.tgz#3db3c2af92d92cfc39be45ae83372d7ad2d59df2"
+  integrity sha512-edvMoyVOrEFC/evz/DYBJ0tmvQ0YeQ+qQZdN4r6LIFxDq1vBd/Pt/+pPOlu9h/whBDiAdQrDkNWtnrpyBMpFOw==
   dependencies:
     "@types/mkdirp" "^1.0.1"
     "@types/node" "^14.11.2"
     "@types/pixelmatch" "^5.2.2"
-    "@types/pngjs" "^3.4.2"
+    "@types/pngjs" "^6.0.0"
     decode-tiff "^0.2.0"
     jpeg-js "^0.4.2"
     mkdirp "^1.0.4"
     pixelmatch "^5.2.1"
-    pngjs "^5.0.0"
+    pngjs "^6.0.0"
 
 immutable@^4.0.0:
   version "4.0.0"
@@ -8430,6 +8422,11 @@ joi@^17.6.0:
     "@sideway/formula" "^3.0.1"
     "@sideway/pinpoint" "^2.0.0"
 
+jpeg-js@^0.4.0:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.4.tgz#a9f1c6f1f9f0fa80cdb3484ed9635054d28936aa"
+  integrity sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==
+
 jpeg-js@^0.4.2:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.3.tgz#6158e09f1983ad773813704be80680550eff977b"
@@ -8806,12 +8803,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@4.17.20:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
-
-lodash@^4.17.20, lodash@^4.17.21:
+lodash@4.17.21, lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -9452,10 +9444,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-mustache@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/mustache/-/mustache-4.1.0.tgz#8c1b042238a982d2eb2d30efc6c14296ae3f699d"
-  integrity sha512-0FsgP/WVq4mKyjolIyX+Z9Bd+3WS8GOwoUTyKXT5cTYMGeauNTi2HPCwERqseC1IHAy0Z7MDZnJBfjabd4O8GQ==
+mustache@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/mustache/-/mustache-4.2.0.tgz#e5892324d60a12ec9c2a73359edca52972bf6f64"
+  integrity sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==
 
 mute-stream@0.0.8:
   version "0.0.8"
@@ -10335,10 +10327,10 @@ pngjs@^4.0.1:
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-4.0.1.tgz#f803869bb2fc1bfe1bf99aa4ec21c108117cfdbe"
   integrity sha512-rf5+2/ioHeQxR6IxuYNYGFytUyG3lma/WW1nsmjeHlWwtb2aByla6dkVc8pmJ9nplzkTA0q2xx7mMWrOTqT4Gg==
 
-pngjs@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-5.0.0.tgz#e79dd2b215767fd9c04561c01236df960bce7fbb"
-  integrity sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==
+pngjs@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-6.0.0.tgz#ca9e5d2aa48db0228a52c419c3308e87720da821"
+  integrity sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==
 
 polished@^4.2.2:
   version "4.2.2"
@@ -10916,24 +10908,26 @@ reflect-metadata@^0.1.2:
   resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
   integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
-reg-cli@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/reg-cli/-/reg-cli-0.17.0.tgz#1ab0d20e147b83e42f25ea3867820b2f45b9ca57"
-  integrity sha512-d5Mo7nrnoFdOIV0S7cKJxT+OYAwUzAMGJsz3lzNvQLlV7C9tt61DfNCbcKKrOksUH6SsasIosyLLQijiWi5iDg==
+reg-cli@^0.17.7:
+  version "0.17.7"
+  resolved "https://registry.yarnpkg.com/reg-cli/-/reg-cli-0.17.7.tgz#5c31b64de4d0c2883212d53405bdfa4421980497"
+  integrity sha512-cwAJ7Zf/0tv6TArIIrZExJrnmiaTjiZj74ajXpYi8FLux6yOqFdfFfOOUJEIW1DP0zFASuG8HBf1v6m+dY575g==
   dependencies:
     bluebird "3.7.2"
-    chalk "4.1.0"
+    chalk "4.1.2"
     cli-spinner "0.2.10"
     cross-spawn "7.0.3"
     del "6.0.0"
-    glob "7.1.6"
-    img-diff-js "0.5.1"
-    lodash "4.17.20"
+    glob "7.2.0"
+    img-diff-js "0.5.2"
+    jpeg-js "^0.4.0"
+    lodash "4.17.21"
     make-dir "3.1.0"
     md5-file "4.0.0"
     meow "3.7.0"
-    mustache "4.1.0"
+    mustache "4.2.0"
     x-img-diff-js "0.3.5"
+    yargs-parser "^21.0.1"
 
 regenerate-unicode-properties@^10.1.0:
   version "10.1.0"
@@ -13318,7 +13312,7 @@ yargs-parser@^21.0.0:
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.0.0.tgz#a485d3966be4317426dd56bdb6a30131b281dc55"
   integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
 
-yargs-parser@^21.1.1:
+yargs-parser@^21.0.1, yargs-parser@^21.1.1:
   version "21.1.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
   integrity sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==

@@ -19,7 +19,7 @@ await $`rm -rf ${workingDir} ${reportPath}`;
 await $`yarn storybook:build`;
 
 // Capture actural snapshot
-await $`yarn storycap http://localhost:6007 --serverCmd \"npx http-server --port 6007 storybook-static\" --flat --outDir ${actualDir}`;
+await $`yarn storycap --flat --outDir ${actualDir} --serverCmd \"npx node-static --port 6007 storybook-static\" http://127.0.0.1:6007`;
 
 // Run visual comparison
 const rate = 0.01;
