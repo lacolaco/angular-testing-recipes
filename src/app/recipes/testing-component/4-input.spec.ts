@@ -4,6 +4,7 @@ import { screen, render, fireEvent } from '@testing-library/angular';
 @Component({
   selector: 'app-title',
   template: ` <h1>{{ appName }}</h1> `,
+  standalone: true,
 })
 export class TitleComponent {
   @Input() appName = '';
@@ -31,14 +32,14 @@ describe('TitleComponent', () => {
   // By render(template)
   it('should render application title', async () => {
     await render(`<app-title [appName]="'My Application'"></app-title>`, {
-      declarations: [TitleComponent],
+      imports: [TitleComponent],
     });
 
     expect(screen.getByRole('heading').textContent).toContain('My Application');
   });
   it('should render changed application title', async () => {
     const { change } = await render(`<app-title [appName]="appName"></app-title>`, {
-      declarations: [TitleComponent],
+      imports: [TitleComponent],
       componentProperties: { appName: 'My Application' },
     });
 

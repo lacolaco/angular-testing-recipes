@@ -7,7 +7,7 @@
 ```ts
 it('should show text content', async () => {
   const { getByText } = await render(`<app-card>TEXT</app-card>`, {
-    declarations: [CardComponent],
+    imports: [CardComponent],
   });
 
   const card = getByText('TEXT');

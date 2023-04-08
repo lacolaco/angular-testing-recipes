@@ -1,14 +1,5 @@
 /* eslint-disable @angular-eslint/no-host-metadata-property */
-import {
-  Component,
-  ComponentFactory,
-  ComponentFactoryResolver,
-  ComponentRef,
-  Directive,
-  HostListener,
-  Input,
-  ViewContainerRef,
-} from '@angular/core';
+import { Component, ComponentRef, Directive, HostListener, Input, ViewContainerRef } from '@angular/core';
 
 @Component({
   template: `<div class="tooltip-pane">
@@ -31,6 +22,7 @@ import {
       }
     `,
   ],
+  standalone: true,
 })
 export class TooltipComponent {
   message: string = '';
@@ -38,16 +30,14 @@ export class TooltipComponent {
 
 @Directive({
   selector: '[appTooltip]',
+  standalone: true,
 })
 export class TooltipDirective {
   @Input('appTooltip') message = '';
 
-  private readonly contentFactory: ComponentFactory<TooltipComponent>;
   private tooltipInstance: ComponentRef<TooltipComponent> | null = null;
 
-  constructor(cfr: ComponentFactoryResolver, private readonly vcRef: ViewContainerRef) {
-    this.contentFactory = cfr.resolveComponentFactory(TooltipComponent);
-  }
+  constructor(private readonly vcRef: ViewContainerRef) {}
 
   @HostListener('mouseenter', ['$event'])
   onMouseEnter($event: MouseEvent) {
@@ -60,7 +50,7 @@ export class TooltipDirective {
   }
 
   private show() {
-    this.tooltipInstance = this.vcRef.createComponent(this.contentFactory);
+    this.tooltipInstance = this.vcRef.createComponent(TooltipComponent);
     this.tooltipInstance.instance.message = this.message;
     this.tooltipInstance.changeDetectorRef.detectChanges();
   }

@@ -24,6 +24,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
     '[class.app-button-stroked]': "appearance === 'stroked'",
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
 })
 export class ButtonComponent {
   @Input() appearance: 'basic' | 'stroked' = 'basic';

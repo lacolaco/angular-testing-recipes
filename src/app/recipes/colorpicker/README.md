@@ -13,7 +13,7 @@ it('should be set value from form control', async () => {
   const { getByRole } = await render(
     `<app-colorpicker [colors]="colors" [formControl]="formControl"></app-colorpicker>`,
     {
-      imports: [ColorpickerModule, ReactiveFormsModule],
+      imports: [ColorpickerComponent, ReactiveFormsModule],
       componentProperties: {
         colors: ['#fff', '#eee'],
         formControl,
@@ -31,7 +31,7 @@ it('should pass the clicked value to form control', async () => {
   const { getByTitle } = await render(
     `<app-colorpicker [colors]="colors" [formControl]="formControl"></app-colorpicker>`,
     {
-      imports: [ColorpickerModule, ReactiveFormsModule],
+      imports: [ColorpickerComponent, ReactiveFormsModule],
       componentProperties: {
         colors: ['#fff', '#eee'],
         formControl,

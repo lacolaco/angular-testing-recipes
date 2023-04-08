@@ -7,6 +7,7 @@ import { screen, render, fireEvent } from '@testing-library/angular';
     <button (click)="toggleLanguage()">Toggle Language</button>
     <p>{{ message }}</p>
   `,
+  standalone: true,
 })
 export class MessageComponent {
   private language: 'en' | 'ja' = 'en';

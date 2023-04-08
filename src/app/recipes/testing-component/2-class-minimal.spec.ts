@@ -7,6 +7,7 @@ import { TestBed } from '@angular/core/testing';
     <button (click)="toggleLanguage()">Toggle Language</button>
     <p>{{ message }}</p>
   `,
+  standalone: true,
 })
 export class MessageComponent {
   private language: 'en' | 'ja' = 'en';
@@ -23,7 +24,7 @@ export class MessageComponent {
 describe('MessageComponent', () => {
   it('.message should be "Hello"', async () => {
     await TestBed.configureTestingModule({
-      declarations: [MessageComponent],
+      imports: [MessageComponent],
     }).compileComponents();
 
     const fixture = TestBed.createComponent(MessageComponent);
@@ -33,7 +34,7 @@ describe('MessageComponent', () => {
   });
   it('.message should be "こんにちは" after toggleLanguage()', async () => {
     await TestBed.configureTestingModule({
-      declarations: [MessageComponent],
+      imports: [MessageComponent],
     }).compileComponents();
 
     const fixture = TestBed.createComponent(MessageComponent);
@@ -45,7 +46,7 @@ describe('MessageComponent', () => {
 
   it('should render "Hello"', async () => {
     await TestBed.configureTestingModule({
-      declarations: [MessageComponent],
+      imports: [MessageComponent],
     }).compileComponents();
 
     const fixture = TestBed.createComponent(MessageComponent);
@@ -56,7 +57,7 @@ describe('MessageComponent', () => {
   });
   it('should render "こんにちは" after toggle language button click', async () => {
     await TestBed.configureTestingModule({
-      declarations: [MessageComponent],
+      imports: [MessageComponent],
     }).compileComponents();
 
     const fixture = TestBed.createComponent(MessageComponent);

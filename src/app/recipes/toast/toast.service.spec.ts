@@ -1,13 +1,13 @@
 import { discardPeriodicTasks, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { screen } from '@testing-library/angular';
-import { ToastModule } from './toast.module';
+import { ToastComponent } from './toast.component';
 import { ToastService } from './toast.service';
 
 describe('ToastService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ToastModule, NoopAnimationsModule],
+      imports: [ToastComponent, NoopAnimationsModule],
     });
   });
 
