@@ -210,9 +210,9 @@
     "@typescript-eslint/utils" "5.48.2"
 
 "@angular/animations@^15.2.6":
-  version "15.2.6"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-15.2.6.tgz#e31ce5e044a6bd6d0458bb8753f8e72321656a32"
-  integrity sha512-2fEhhj7xTzWHD61B502eXwDclsurkOK7CU+iRdl8EAtEobLRt62sG/XHmJ71UaaniWyI/H0sUSEJuF8TIPcaoQ==
+  version "15.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-15.2.9.tgz#f0773d2071a5a17c03478d5838029b03bbab9a03"
+  integrity sha512-GQujLhI0cQFcl4Q8y0oSYKSRnW23GIeSL+Arl4eFufziJ9hGAAQNuesaNs/7i+9UlTHDMkPH3kd5ScXuYYz6wg==
   dependencies:
     tslib "^2.3.0"
 
