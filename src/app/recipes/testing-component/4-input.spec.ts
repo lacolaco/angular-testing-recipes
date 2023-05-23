@@ -20,11 +20,11 @@ describe('TitleComponent', () => {
     expect(screen.getByRole('heading').textContent).toContain('My Application');
   });
   it('should render changed application title', async () => {
-    const { change } = await render(TitleComponent, {
+    const { rerender } = await render(TitleComponent, {
       componentProperties: { appName: 'My Application' },
     });
 
-    change({ appName: 'My Application v2' });
+    rerender({ componentProperties: { appName: 'My Application v2' }});
 
     expect(screen.getByRole('heading').textContent).toContain('My Application v2');
   });
@@ -38,12 +38,12 @@ describe('TitleComponent', () => {
     expect(screen.getByRole('heading').textContent).toContain('My Application');
   });
   it('should render changed application title', async () => {
-    const { change } = await render(`<app-title [appName]="appName"></app-title>`, {
+    const { rerender } = await render(`<app-title [appName]="appName"></app-title>`, {
       imports: [TitleComponent],
       componentProperties: { appName: 'My Application' },
     });
 
-    change({ appName: 'My Application v2' });
+    rerender({ componentProperties: { appName: 'My Application v2' }});
 
     expect(screen.getByRole('heading').textContent).toContain('My Application v2');
   });
