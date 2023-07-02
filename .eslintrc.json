@@ -1,11 +1,17 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": [
+          "tsconfig.json"
+        ],
         "createDefaultProgram": true
       },
       "extends": [
@@ -33,7 +39,10 @@
       }
     },
     {
-      "files": ["*.js", "*.mjs"],
+      "files": [
+        "*.js",
+        "*.mjs"
+      ],
       "parser": "@babel/eslint-parser",
       "parserOptions": {
         "ecmaVersion": 2021,
@@ -42,7 +51,9 @@
       "extends": []
     },
     {
-      "files": ["*.component.html"],
+      "files": [
+        "*.component.html"
+      ],
       "extends": [
         "plugin:prettier/recommended",
         "plugin:@angular-eslint/template/recommended"
@@ -50,15 +61,27 @@
       "rules": {}
     },
     {
-      "files": ["*.css"],
-      "extends": ["plugin:prettier/recommended"],
+      "files": [
+        "*.css"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
       "rules": {}
     },
     {
-      "files": ["*.html"],
-      "excludedFiles": ["*.component.html"],
-      "plugins": ["html"],
-      "extends": ["plugin:prettier/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "excludedFiles": [
+        "*.component.html"
+      ],
+      "plugins": [
+        "html"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
       "rules": {}
     }
   ]
