@@ -1,11 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>lacolaco/renovate-config"],
+  "extends": ["github>lacolaco/renovate-config", "schedule:weekly"],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [
     {
       "groupName": "stylelint packages",
       "matchSourceUrlPrefixes": ["https://github.com/stylelint/"]
+    },
+    {
+      "groupName": "storybook packages",
+      "matchPackagePrefixes": ["@storybook/"]
     }
   ]
 }
