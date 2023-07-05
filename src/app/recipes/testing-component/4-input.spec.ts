@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { screen, render, fireEvent } from '@testing-library/angular';
+import { screen, render } from '@testing-library/angular';
 
 @Component({
   selector: 'app-title',
@@ -14,17 +14,17 @@ describe('TitleComponent', () => {
   // By render(type)
   it('should render application title', async () => {
     await render(TitleComponent, {
-      componentProperties: { appName: 'My Application' },
+      componentInputs: { appName: 'My Application' },
     });
 
     expect(screen.getByRole('heading').textContent).toContain('My Application');
   });
   it('should render changed application title', async () => {
-    const { change } = await render(TitleComponent, {
-      componentProperties: { appName: 'My Application' },
+    const { rerender } = await render(TitleComponent, {
+      componentInputs: { appName: 'My Application' },
     });
 
-    change({ appName: 'My Application v2' });
+    await rerender({ componentInputs: { appName: 'My Application v2' } });
 
     expect(screen.getByRole('heading').textContent).toContain('My Application v2');
   });
@@ -38,12 +38,12 @@ describe('TitleComponent', () => {
     expect(screen.getByRole('heading').textContent).toContain('My Application');
   });
   it('should render changed application title', async () => {
-    const { change } = await render(`<app-title [appName]="appName"></app-title>`, {
+    const { rerender } = await render(`<app-title [appName]="appName"></app-title>`, {
       imports: [TitleComponent],
       componentProperties: { appName: 'My Application' },
     });
 
-    change({ appName: 'My Application v2' });
+    await rerender({ componentProperties: { appName: 'My Application v2' } });
 
     expect(screen.getByRole('heading').textContent).toContain('My Application v2');
   });

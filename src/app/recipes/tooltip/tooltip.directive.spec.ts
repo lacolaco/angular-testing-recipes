@@ -20,9 +20,9 @@ describe('TooltipDirective', () => {
       componentProperties: { message },
     });
     const host = getByText('HOST');
-    userEvent.hover(host);
+    await userEvent.hover(host);
     expect(queryByText(message)).toBeInTheDocument();
-    userEvent.unhover(host);
+    await userEvent.unhover(host);
     expect(queryByText(message)).not.toBeInTheDocument();
   });
 });

@@ -45,18 +45,19 @@ describe('ColorpickerComponent', () => {
   });
 
   it('should set selected color from [value] input', async () => {
-    const { getByRole, change } = await render(
+    const colors = ['#fff', '#eee'];
+    const { getByRole, rerender } = await render(
       `<app-colorpicker [colors]="colors" [value]="selectedValue"></app-colorpicker>`,
       {
         imports: [ColorpickerComponent],
         componentProperties: {
-          colors: ['#fff', '#eee'],
+          colors,
           selectedValue: '#eee',
         },
       },
     );
     expect(getByRole('option', { selected: true })).toHaveAttribute('title', '#eee');
-    change({ selectedValue: '#fff' });
+    await rerender({ componentProperties: { colors, selectedValue: '#fff' } });
     expect(getByRole('option', { selected: true })).toHaveAttribute('title', '#fff');
   });
 
@@ -108,18 +109,19 @@ describe('ColorpickerComponent', () => {
 
     it('should pass the input value to form control', async () => {
       const formControl = new FormControl('#eee');
-      const { change } = await render(
+      const colors = ['#fff', '#eee'];
+      const { rerender } = await render(
         `<app-colorpicker [colors]="colors" [value]="selectedColor" [formControl]="formControl"></app-colorpicker>`,
         {
           imports: [ColorpickerComponent, ReactiveFormsModule],
           componentProperties: {
-            colors: ['#fff', '#eee'],
-            selectedColor: null as string | null,
+            colors,
             formControl,
+            selectedColor: null as string | null,
           },
         },
       );
-      change({ selectedColor: '#fff' });
+      await rerender({ componentProperties: { colors, formControl, selectedColor: '#fff' } });
       expect(formControl.value).toBe('#fff');
     });
   });
