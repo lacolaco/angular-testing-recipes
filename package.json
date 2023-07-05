@@ -48,7 +48,7 @@
     "@storybook/addon-essentials": "^7.0.24",
     "@storybook/addon-links": "^7.0.24",
     "@storybook/angular": "^7.0.24",
-    "@testing-library/angular": "^13.0.0",
+    "@testing-library/angular": "^14.0.0",
     "@testing-library/jasmine-dom": "^1.2.0",
     "@testing-library/user-event": "^14.0.0",
     "@types/jasmine": "~4.3.0",
