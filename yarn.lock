@@ -256,9 +256,9 @@
     yargs "17.7.2"
 
 "@angular/common@^16.1.3":
-  version "16.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-16.1.3.tgz#679ec1836c4c19d3cdf923c7a9532aa73d98f752"
-  integrity sha512-ZzJ6EwQHUkiZYV0zH/UxyUYW5uxomsyk7tdtqZIxAR5m2ktYkQ5XlqgPjBO8voF54Rs5Ot43RkPCLesbZyJDsw==
+  version "16.1.6"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-16.1.6.tgz#45f8a32e95c153095bc4c4c818562117076ee159"
+  integrity sha512-30Y8DGs+oosA+BcDZd1SuZ4HDT+DVZ6lVT4L+mBUH1BSkNna08FrbmrGQxO82CcxU6ZK0q1YLVkkb5cGx8y9ew==
   dependencies:
     tslib "^2.3.0"
 
