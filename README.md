@@ -15,8 +15,8 @@ This project is a collection of testing examples of Angular applications and lib
 
 ## Run tests
 
-- `yarn install`
-- `yarn test`
+- `pnpm install`
+- `pnpm run test`
 
 ## Recipes
 

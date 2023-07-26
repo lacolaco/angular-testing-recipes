@@ -10,15 +10,16 @@
     "lint": "ng lint && stylelint 'src/**/*.css'",
     "lint:fix": "ng lint --fix && stylelint 'src/**/*.css' --fix",
     "docs:json": "compodoc --silent -p ./tsconfig.json -e json -d .storybook/",
-    "prestorybook": "yarn docs:json",
+    "prestorybook": "npm run docs:json",
     "storybook": "ng run angular-testing-recipes:storybook",
-    "prestorybook:build": "yarn prestorybook",
+    "prestorybook:build": "npm run prestorybook",
     "storybook:build": "ng run angular-testing-recipes:build-storybook",
     "vistest": "./vistest/vistest.mjs",
-    "vistest:check": "yarn vistest --check",
-    "vistest:update": "yarn vistest --update"
+    "vistest:check": "npm run vistest --check",
+    "vistest:update": "npm run vistest --update"
   },
   "private": true,
+  "packageManager": "pnpm@8.6.6",
   "dependencies": {
     "@angular/animations": "^16.1.3",
     "@angular/cdk": "^16.1.3",
