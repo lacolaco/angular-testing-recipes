@@ -16,16 +16,16 @@ console.log(`Check mode: ${check}`);
 await $`rm -rf ${workingDir} ${reportPath}`;
 
 // Build storybook
-await $`yarn storybook:build`;
+await $`npm run storybook:build`;
 
 // Capture actural snapshot
-await $`yarn storycap --flat --outDir ${actualDir} --serverCmd \"npx node-static --port 6007 storybook-static\" http://127.0.0.1:6007`;
+await $`npx storycap --flat --outDir ${actualDir} --serverCmd \"npx node-static --port 6007 storybook-static\" http://127.0.0.1:6007`;
 
 // Run visual comparison
 const rate = 0.01;
 const updateFlag = update ? '-U' : '';
 
-const job = $`yarn reg-cli ${actualDir} ${snapshotDir} ${diffDir} -E -R ${reportPath} -J ${workingDir}/reg.json -T ${rate} ${updateFlag}`;
+const job = $`npx reg-cli ${actualDir} ${snapshotDir} ${diffDir} -E -R ${reportPath} -J ${workingDir}/reg.json -T ${rate} ${updateFlag}`;
 
 if (check) {
   await job;
