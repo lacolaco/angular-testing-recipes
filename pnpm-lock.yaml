@@ -45,28 +45,28 @@ dependencies:
 devDependencies:
   '@angular-devkit/build-angular':
     specifier: ^16.1.3
-    version: 16.1.3(@angular/compiler-cli@16.1.3)(@types/node@20.3.3)(karma@6.4.2)(typescript@4.9.5)
+    version: 16.1.3(@angular/compiler-cli@16.1.3)(@types/node@20.3.3)(karma@6.4.2)(typescript@5.4.2)
   '@angular-eslint/builder':
     specifier: 16.1.1
-    version: 16.1.1(eslint@8.44.0)(typescript@4.9.5)
+    version: 16.1.1(eslint@8.44.0)(typescript@5.4.2)
   '@angular-eslint/eslint-plugin':
     specifier: 16.1.1
-    version: 16.1.1(eslint@8.44.0)(typescript@4.9.5)
+    version: 16.1.1(eslint@8.44.0)(typescript@5.4.2)
   '@angular-eslint/eslint-plugin-template':
     specifier: 16.1.1
-    version: 16.1.1(eslint@8.44.0)(typescript@4.9.5)
+    version: 16.1.1(eslint@8.44.0)(typescript@5.4.2)
   '@angular-eslint/schematics':
     specifier: 16.1.1
-    version: 16.1.1(@angular/cli@16.1.3)(eslint@8.44.0)(typescript@4.9.5)
+    version: 16.1.1(@angular/cli@16.1.3)(eslint@8.44.0)(typescript@5.4.2)
   '@angular-eslint/template-parser':
     specifier: 16.1.1
-    version: 16.1.1(eslint@8.44.0)(typescript@4.9.5)
+    version: 16.1.1(eslint@8.44.0)(typescript@5.4.2)
   '@angular/cli':
     specifier: ^16.1.3
     version: 16.1.3
   '@angular/compiler-cli':
     specifier: ^16.1.3
-    version: 16.1.3(@angular/compiler@16.1.3)(typescript@4.9.5)
+    version: 16.1.3(@angular/compiler@16.1.3)(typescript@5.4.2)
   '@angular/elements':
     specifier: ^16.1.3
     version: 16.1.3(@angular/core@16.1.3)(rxjs@7.8.1)
@@ -84,7 +84,7 @@ devDependencies:
     version: 7.0.24(react-dom@18.2.0)(react@18.2.0)
   '@storybook/angular':
     specifier: ^7.0.24
-    version: 7.0.24(@angular-devkit/architect@0.1601.3)(@angular-devkit/build-angular@16.1.3)(@angular-devkit/core@16.1.3)(@angular/cli@16.1.3)(@angular/common@16.1.3)(@angular/compiler-cli@16.1.3)(@angular/compiler@16.1.3)(@angular/core@16.1.3)(@angular/forms@16.1.3)(@angular/platform-browser-dynamic@16.1.3)(@angular/platform-browser@16.1.3)(@babel/core@7.22.5)(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@4.9.5)(zone.js@0.13.1)
+    version: 7.0.24(@angular-devkit/architect@0.1601.3)(@angular-devkit/build-angular@16.1.3)(@angular-devkit/core@16.1.3)(@angular/cli@16.1.3)(@angular/common@16.1.3)(@angular/compiler-cli@16.1.3)(@angular/compiler@16.1.3)(@angular/core@16.1.3)(@angular/forms@16.1.3)(@angular/platform-browser-dynamic@16.1.3)(@angular/platform-browser@16.1.3)(@babel/core@7.22.5)(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@5.4.2)(zone.js@0.13.1)
   '@testing-library/angular':
     specifier: ^14.0.0
     version: 14.1.1(@angular/common@16.1.3)(@angular/core@16.1.3)(@angular/platform-browser@16.1.3)(@angular/router@16.1.3)
@@ -105,10 +105,10 @@ devDependencies:
     version: 1.3.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.59.2
-    version: 5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)(typescript@4.9.5)
+    version: 5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)(typescript@5.4.2)
   '@typescript-eslint/parser':
     specifier: ^5.59.2
-    version: 5.60.1(eslint@8.44.0)(typescript@4.9.5)
+    version: 5.60.1(eslint@8.44.0)(typescript@5.4.2)
   eslint:
     specifier: ^8.39.0
     version: 8.44.0
@@ -170,8 +170,8 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0(prettier@2.8.8)(stylelint@15.9.0)
   typescript:
-    specifier: ~4.9.5
-    version: 4.9.5
+    specifier: ~5.4.0
+    version: 5.4.2
   zx:
     specifier: ^7.0.0
     version: 7.2.2
@@ -205,7 +205,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular@16.1.3(@angular/compiler-cli@16.1.3)(@types/node@20.3.3)(karma@6.4.2)(typescript@4.9.5):
+  /@angular-devkit/build-angular@16.1.3(@angular/compiler-cli@16.1.3)(@types/node@20.3.3)(karma@6.4.2)(typescript@5.4.2):
     resolution: {integrity: sha512-1scrdUdKRa9TkJ9jev/KRzFttbLUVACQvVRL0G67nUAdtJ/bQX8eui85axpCNPFihK4ReSW3R4lrgcVC2NUSoA==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -244,7 +244,7 @@ packages:
       '@angular-devkit/architect': 0.1601.3(chokidar@3.5.3)
       '@angular-devkit/build-webpack': 0.1601.3(chokidar@3.5.3)(webpack-dev-server@4.15.0)(webpack@5.86.0)
       '@angular-devkit/core': 16.1.3(chokidar@3.5.3)
-      '@angular/compiler-cli': 16.1.3(@angular/compiler@16.1.3)(typescript@4.9.5)
+      '@angular/compiler-cli': 16.1.3(@angular/compiler@16.1.3)(typescript@5.4.2)
       '@babel/core': 7.22.5
       '@babel/generator': 7.22.5
       '@babel/helper-annotate-as-pure': 7.22.5
@@ -256,7 +256,7 @@ packages:
       '@babel/runtime': 7.22.5
       '@babel/template': 7.22.5
       '@discoveryjs/json-ext': 0.5.7
-      '@ngtools/webpack': 16.1.3(@angular/compiler-cli@16.1.3)(typescript@4.9.5)(webpack@5.86.0)
+      '@ngtools/webpack': 16.1.3(@angular/compiler-cli@16.1.3)(typescript@5.4.2)(webpack@5.86.0)
       '@vitejs/plugin-basic-ssl': 1.0.1(vite@4.3.9)
       ansi-colors: 4.1.3
       autoprefixer: 10.4.14(postcss@8.4.24)
@@ -300,7 +300,7 @@ packages:
       text-table: 0.2.0
       tree-kill: 1.2.2
       tslib: 2.5.3
-      typescript: 4.9.5
+      typescript: 5.4.2
       vite: 4.3.9(@types/node@20.3.3)(less@4.1.3)(sass@1.63.2)(terser@5.17.7)
       webpack: 5.86.0(esbuild@0.17.19)
       webpack-dev-middleware: 6.1.1(webpack@5.86.0)
@@ -402,7 +402,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-eslint/builder@16.1.1(eslint@8.44.0)(typescript@4.9.5):
+  /@angular-eslint/builder@16.1.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-NaB/A0mmlzp7laiucRUsRyoCrOE1In3UifsGP0vD6yjUpefk4g0v+0vCg8mhsIky8gYDtBE9YRfUiLA9FlF/FA==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
@@ -411,7 +411,7 @@ packages:
       '@nx/devkit': 16.5.1(nx@16.5.1)
       eslint: 8.44.0
       nx: 16.5.1
-      typescript: 4.9.5
+      typescript: 5.4.2
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -422,45 +422,45 @@ packages:
     resolution: {integrity: sha512-TB01AWZBDfrZBxN1I50HfBXtC7q4NI5fwl1aS4tOfef2/kQjTtR9zmha8CsxjDkAOa9tA/4MUayAMqEBQLuHKQ==}
     dev: true
 
-  /@angular-eslint/eslint-plugin-template@16.1.1(eslint@8.44.0)(typescript@4.9.5):
+  /@angular-eslint/eslint-plugin-template@16.1.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-hwbpiUxLIY3TnZycieh+G4fbTWGMfzKx076O5Vuh2H4ZfXfs6ZXoi3Z0TH6X9lTmdgrwzOg1v4o5kdqu7MqPBg==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
       '@angular-eslint/bundled-angular-compiler': 16.1.1
-      '@angular-eslint/utils': 16.1.1(eslint@8.44.0)(typescript@4.9.5)
-      '@typescript-eslint/type-utils': 5.62.0(eslint@8.44.0)(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@4.9.5)
+      '@angular-eslint/utils': 16.1.1(eslint@8.44.0)(typescript@5.4.2)
+      '@typescript-eslint/type-utils': 5.62.0(eslint@8.44.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@5.4.2)
       aria-query: 5.3.0
       axobject-query: 3.1.1
       eslint: 8.44.0
-      typescript: 4.9.5
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@angular-eslint/eslint-plugin@16.1.1(eslint@8.44.0)(typescript@4.9.5):
+  /@angular-eslint/eslint-plugin@16.1.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-GauEwFGEcgIdsld4cVarFJYYxaRbMLzbpxyvBUDFg4LNjlcQNt7zfqXRLJoZAaFJFPtGtAoo1+6BlEKErsntuQ==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
-      '@angular-eslint/utils': 16.1.1(eslint@8.44.0)(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@4.9.5)
+      '@angular-eslint/utils': 16.1.1(eslint@8.44.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@5.4.2)
       eslint: 8.44.0
-      typescript: 4.9.5
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@angular-eslint/schematics@16.1.1(@angular/cli@16.1.3)(eslint@8.44.0)(typescript@4.9.5):
+  /@angular-eslint/schematics@16.1.1(@angular/cli@16.1.3)(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-KlR01gpURPjz5OcoEvmKv3zi8l6lFpXYmqkXbGMCz828QlqBz1X7iGLAPJki+WUFSFKbRsf4qqaWq6O/8vph7Q==}
     peerDependencies:
       '@angular/cli': '>= 16.0.0 < 17.0.0'
     dependencies:
-      '@angular-eslint/eslint-plugin': 16.1.1(eslint@8.44.0)(typescript@4.9.5)
-      '@angular-eslint/eslint-plugin-template': 16.1.1(eslint@8.44.0)(typescript@4.9.5)
+      '@angular-eslint/eslint-plugin': 16.1.1(eslint@8.44.0)(typescript@5.4.2)
+      '@angular-eslint/eslint-plugin-template': 16.1.1(eslint@8.44.0)(typescript@5.4.2)
       '@angular/cli': 16.1.3
       '@nx/devkit': 16.5.1(nx@16.5.1)
       ignore: 5.2.4
@@ -476,7 +476,7 @@ packages:
       - typescript
     dev: true
 
-  /@angular-eslint/template-parser@16.1.1(eslint@8.44.0)(typescript@4.9.5):
+  /@angular-eslint/template-parser@16.1.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-ZJ+M4+JGYcsIP/t+XiuzL5A5pCjjCen272U3/M/WqIMDDxyIKrHubK1bVtr2kndCEudqud+WyJU0ub13UIwGgw==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
@@ -485,19 +485,19 @@ packages:
       '@angular-eslint/bundled-angular-compiler': 16.1.1
       eslint: 8.44.0
       eslint-scope: 7.2.0
-      typescript: 4.9.5
+      typescript: 5.4.2
     dev: true
 
-  /@angular-eslint/utils@16.1.1(eslint@8.44.0)(typescript@4.9.5):
+  /@angular-eslint/utils@16.1.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-cmSTyFFY2TMLjhKdju0KQ9GB6nnXt1AbY9tZ0UtWGo3NKbrBUogc+PR9ma17VRAGhvdj/sSVkStphJH3F7rUgQ==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
       '@angular-eslint/bundled-angular-compiler': 16.1.1
-      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@4.9.5)
+      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@5.4.2)
       eslint: 8.44.0
-      typescript: 4.9.5
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -566,7 +566,7 @@ packages:
       rxjs: 7.8.1
       tslib: 2.6.0
 
-  /@angular/compiler-cli@16.1.3(@angular/compiler@16.1.3)(typescript@4.9.5):
+  /@angular/compiler-cli@16.1.3(@angular/compiler@16.1.3)(typescript@5.4.2):
     resolution: {integrity: sha512-aUqnIV9rRTBNgiQRS0Gv6lhghaGj1vpVRyXgiE4VnTR9uBONSsGKMNALYBBhXRTSk2e0cvutt0ubLgmNpdyWyQ==}
     engines: {node: ^16.14.0 || >=18.10.0}
     hasBin: true
@@ -582,7 +582,7 @@ packages:
       reflect-metadata: 0.1.13
       semver: 7.5.3
       tslib: 2.6.0
-      typescript: 4.9.5
+      typescript: 5.4.2
       yargs: 17.7.2
     transitivePeerDependencies:
       - supports-color
@@ -1148,6 +1148,7 @@ packages:
   /@babel/plugin-proposal-async-generator-functions@7.20.7(@babel/core@7.21.4):
     resolution: {integrity: sha512-xMbiLsn/8RK7Wq7VeVytytS2L6qE69bXPB10YCmMdDZbKF4okCqY74pI/jJQ/8U0b/F6NrT2+14b8/P9/3AMGA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1163,6 +1164,7 @@ packages:
   /@babel/plugin-proposal-async-generator-functions@7.20.7(@babel/core@7.22.5):
     resolution: {integrity: sha512-xMbiLsn/8RK7Wq7VeVytytS2L6qE69bXPB10YCmMdDZbKF4okCqY74pI/jJQ/8U0b/F6NrT2+14b8/P9/3AMGA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1178,6 +1180,7 @@ packages:
   /@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1191,6 +1194,7 @@ packages:
   /@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.22.5):
     resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1204,6 +1208,7 @@ packages:
   /@babel/plugin-proposal-class-static-block@7.21.0(@babel/core@7.21.4):
     resolution: {integrity: sha512-XP5G9MWNUskFuP30IfFSEFB0Z6HzLIUcjYM4bYOPHXl7eiJ9HFv8tWj6TXTN5QODiEhDZAeI4hLok2iHFFV4hw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-static-block instead.
     peerDependencies:
       '@babel/core': ^7.12.0
     dependencies:
@@ -1218,6 +1223,7 @@ packages:
   /@babel/plugin-proposal-dynamic-import@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-1auuwmK+Rz13SJj36R+jqFPMJWyKEDd7lLSdOj4oJK0UTgGueSAtkrCvz9ewmgyU/P941Rv2fQwZJN8s6QruXw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-dynamic-import instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1229,6 +1235,7 @@ packages:
   /@babel/plugin-proposal-export-namespace-from@7.18.9(@babel/core@7.21.4):
     resolution: {integrity: sha512-k1NtHyOMvlDDFeb9G5PhUXuGj8m/wiwojgQVEhJ/fsVsMCpLyOP4h0uGEjYJKrRI+EVPlb5Jk+Gt9P97lOGwtA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-export-namespace-from instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1240,6 +1247,7 @@ packages:
   /@babel/plugin-proposal-json-strings@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-lr1peyn9kOdbYc0xr0OdHTZ5FMqS6Di+H0Fz2I/JwMzGmzJETNeOFq2pBySw6X/KFL5EWDjlJuMsUGRFb8fQgQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1251,6 +1259,7 @@ packages:
   /@babel/plugin-proposal-logical-assignment-operators@7.20.7(@babel/core@7.21.4):
     resolution: {integrity: sha512-y7C7cZgpMIjWlKE5T7eJwp+tnRYM89HmRvWM5EQuB5BoHEONjmQ8lSNmBUwOyy/GFRsohJED51YBF79hE1djug==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-logical-assignment-operators instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1262,6 +1271,7 @@ packages:
   /@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-wQxQzxYeJqHcfppzBDnm1yAY0jSRkUXR2z8RePZYrKwMKgMlE8+Z6LUno+bd6LvbGh8Gltvy74+9pIYkr+XkKA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1273,6 +1283,7 @@ packages:
   /@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.22.5):
     resolution: {integrity: sha512-wQxQzxYeJqHcfppzBDnm1yAY0jSRkUXR2z8RePZYrKwMKgMlE8+Z6LUno+bd6LvbGh8Gltvy74+9pIYkr+XkKA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1284,6 +1295,7 @@ packages:
   /@babel/plugin-proposal-numeric-separator@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-ozlZFogPqoLm8WBr5Z8UckIoE4YQ5KESVcNudyXOR8uqIkliTEgJ3RoketfG6pmzLdeZF0H/wjE9/cCEitBl7Q==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1295,6 +1307,7 @@ packages:
   /@babel/plugin-proposal-object-rest-spread@7.20.7(@babel/core@7.21.4):
     resolution: {integrity: sha512-d2S98yCiLxDVmBmE8UjGcfPvNEUbA1U5q5WxaWFUGRzJSVAZqm5W6MbPct0jxnegUZ0niLeNX+IOzEs7wYg9Dg==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1309,6 +1322,7 @@ packages:
   /@babel/plugin-proposal-optional-catch-binding@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-Q40HEhs9DJQyaZfUjjn6vE8Cv4GmMHCYuMGIWUnlxH6400VGxOuwWsPt4FxXxJkC/5eOzgn0z21M9gMT4MOhbw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1320,6 +1334,7 @@ packages:
   /@babel/plugin-proposal-optional-chaining@7.21.0(@babel/core@7.21.4):
     resolution: {integrity: sha512-p4zeefM72gpmEe2fkUr/OnOXpWEf8nAgk7ZYVqqfFiyIG7oFfVZcCrU64hWn5xp4tQ9LkV4bTIa5rD0KANpKNA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1332,6 +1347,7 @@ packages:
   /@babel/plugin-proposal-optional-chaining@7.21.0(@babel/core@7.22.5):
     resolution: {integrity: sha512-p4zeefM72gpmEe2fkUr/OnOXpWEf8nAgk7ZYVqqfFiyIG7oFfVZcCrU64hWn5xp4tQ9LkV4bTIa5rD0KANpKNA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1344,6 +1360,7 @@ packages:
   /@babel/plugin-proposal-private-methods@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-nutsvktDItsNn4rpGItSNV2sz1XwS+nfU0Rg8aCx3W3NOKVzdMjJRu0O5OkgDp3ZGICSTbgRpxZoWsxoKRvbeA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1357,6 +1374,7 @@ packages:
   /@babel/plugin-proposal-private-property-in-object@7.21.0(@babel/core@7.21.4):
     resolution: {integrity: sha512-ha4zfehbJjc5MmXBlHec1igel5TJXXLDDRbuJ4+XT2TJcyD9/V1919BA8gMvsdHcNMBy4WBUBiRb3nw/EQUtBw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1381,6 +1399,7 @@ packages:
   /@babel/plugin-proposal-unicode-property-regex@7.18.6(@babel/core@7.21.4):
     resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
     engines: {node: '>=4'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -1392,6 +1411,7 @@ packages:
   /@babel/plugin-proposal-unicode-property-regex@7.18.6(@babel/core@7.22.5):
     resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
     engines: {node: '>=4'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -3627,7 +3647,7 @@ packages:
       tar-fs: 2.1.1
     dev: true
 
-  /@ngtools/webpack@16.1.3(@angular/compiler-cli@16.1.3)(typescript@4.9.5)(webpack@5.86.0):
+  /@ngtools/webpack@16.1.3(@angular/compiler-cli@16.1.3)(typescript@5.4.2)(webpack@5.86.0):
     resolution: {integrity: sha512-YTL1RzP7ErJqskx+ZwdC/nWsOSBfC4yYWmMyWL2J0d+oJ3N2XIzrKVoDcZ4IVzv3Du+3zoGp0ups/wWXvfzM/Q==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -3635,8 +3655,8 @@ packages:
       typescript: '>=4.9.3 <5.2'
       webpack: ^5.54.0
     dependencies:
-      '@angular/compiler-cli': 16.1.3(@angular/compiler@16.1.3)(typescript@4.9.5)
-      typescript: 4.9.5
+      '@angular/compiler-cli': 16.1.3(@angular/compiler@16.1.3)(typescript@5.4.2)
+      typescript: 5.4.2
       webpack: 5.86.0(esbuild@0.17.19)
     dev: true
 
@@ -4220,7 +4240,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@storybook/angular@7.0.24(@angular-devkit/architect@0.1601.3)(@angular-devkit/build-angular@16.1.3)(@angular-devkit/core@16.1.3)(@angular/cli@16.1.3)(@angular/common@16.1.3)(@angular/compiler-cli@16.1.3)(@angular/compiler@16.1.3)(@angular/core@16.1.3)(@angular/forms@16.1.3)(@angular/platform-browser-dynamic@16.1.3)(@angular/platform-browser@16.1.3)(@babel/core@7.22.5)(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@4.9.5)(zone.js@0.13.1):
+  /@storybook/angular@7.0.24(@angular-devkit/architect@0.1601.3)(@angular-devkit/build-angular@16.1.3)(@angular-devkit/core@16.1.3)(@angular/cli@16.1.3)(@angular/common@16.1.3)(@angular/compiler-cli@16.1.3)(@angular/compiler@16.1.3)(@angular/core@16.1.3)(@angular/forms@16.1.3)(@angular/platform-browser-dynamic@16.1.3)(@angular/platform-browser@16.1.3)(@babel/core@7.22.5)(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@5.4.2)(zone.js@0.13.1):
     resolution: {integrity: sha512-7W/yIJKKH2V1Xtp/vOJIrka84pT89/k9CibhkfurXKysGbImmAgmfFuXNKybyjwolLy3gOg2k/5Bjl3aYmFsfw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -4246,18 +4266,18 @@ packages:
         optional: true
     dependencies:
       '@angular-devkit/architect': 0.1601.3(chokidar@3.5.3)
-      '@angular-devkit/build-angular': 16.1.3(@angular/compiler-cli@16.1.3)(@types/node@20.3.3)(karma@6.4.2)(typescript@4.9.5)
+      '@angular-devkit/build-angular': 16.1.3(@angular/compiler-cli@16.1.3)(@types/node@20.3.3)(karma@6.4.2)(typescript@5.4.2)
       '@angular-devkit/core': 16.1.3(chokidar@3.5.3)
       '@angular/cli': 16.1.3
       '@angular/common': 16.1.3(@angular/core@16.1.3)(rxjs@7.8.1)
       '@angular/compiler': 16.1.3(@angular/core@16.1.3)
-      '@angular/compiler-cli': 16.1.3(@angular/compiler@16.1.3)(typescript@4.9.5)
+      '@angular/compiler-cli': 16.1.3(@angular/compiler@16.1.3)(typescript@5.4.2)
       '@angular/core': 16.1.3(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/forms': 16.1.3(@angular/common@16.1.3)(@angular/core@16.1.3)(@angular/platform-browser@16.1.3)(rxjs@7.8.1)
       '@angular/platform-browser': 16.1.3(@angular/animations@16.1.3)(@angular/common@16.1.3)(@angular/core@16.1.3)
       '@angular/platform-browser-dynamic': 16.1.3(@angular/common@16.1.3)(@angular/compiler@16.1.3)(@angular/core@16.1.3)(@angular/platform-browser@16.1.3)
       '@babel/core': 7.22.5
-      '@storybook/builder-webpack5': 7.0.24(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@storybook/builder-webpack5': 7.0.24(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.2)
       '@storybook/cli': 7.0.24
       '@storybook/client-logger': 7.0.24
       '@storybook/core-client': 7.0.24
@@ -4286,7 +4306,7 @@ packages:
       telejson: 7.1.0
       ts-dedent: 2.1.1
       tsconfig-paths-webpack-plugin: 3.5.2
-      typescript: 4.9.5
+      typescript: 5.4.2
       util-deprecate: 1.0.2
       webpack: 5.86.0(esbuild@0.17.19)
       zone.js: 0.13.1
@@ -4378,7 +4398,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-webpack5@7.0.24(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
+  /@storybook/builder-webpack5@7.0.24(esbuild@0.17.19)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.2):
     resolution: {integrity: sha512-gA4otfsq9yTRT2IdYKkyqUdy+60a09CRDUtM1JB8a1eLmyL4az02qZv/l6D9Ccj/w5JNcJndtJX+3thOowOWOQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -4416,7 +4436,7 @@ packages:
       case-sensitive-paths-webpack-plugin: 2.4.0
       css-loader: 6.8.1(webpack@5.86.0)
       express: 4.18.1
-      fork-ts-checker-webpack-plugin: 7.3.0(typescript@4.9.5)(webpack@5.86.0)
+      fork-ts-checker-webpack-plugin: 7.3.0(typescript@5.4.2)(webpack@5.86.0)
       fs-extra: 11.1.1
       html-webpack-plugin: 5.5.0(webpack@5.86.0)
       path-browserify: 1.0.1
@@ -4427,7 +4447,7 @@ packages:
       style-loader: 3.3.2(webpack@5.86.0)
       terser-webpack-plugin: 5.3.9(esbuild@0.17.19)(webpack@5.86.0)
       ts-dedent: 2.1.1
-      typescript: 4.9.5
+      typescript: 5.4.2
       util: 0.12.5
       util-deprecate: 1.0.2
       webpack: 5.86.0(esbuild@0.17.19)
@@ -5338,7 +5358,7 @@ packages:
     dev: true
     optional: true
 
-  /@typescript-eslint/eslint-plugin@5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)(typescript@4.9.5):
+  /@typescript-eslint/eslint-plugin@5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-KSWsVvsJsLJv3c4e73y/Bzt7OpqMCADUO846bHcuWYSYM19bldbAeDv7dYyV0jwkbMfJ2XdlzwjhXtuD7OY6bw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5350,23 +5370,23 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.5.1
-      '@typescript-eslint/parser': 5.60.1(eslint@8.44.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 5.60.1(eslint@8.44.0)(typescript@5.4.2)
       '@typescript-eslint/scope-manager': 5.60.1
-      '@typescript-eslint/type-utils': 5.60.1(eslint@8.44.0)(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.60.1(eslint@8.44.0)(typescript@4.9.5)
+      '@typescript-eslint/type-utils': 5.60.1(eslint@8.44.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 5.60.1(eslint@8.44.0)(typescript@5.4.2)
       debug: 4.3.4
       eslint: 8.44.0
       grapheme-splitter: 1.0.4
       ignore: 5.2.4
       natural-compare-lite: 1.4.0
       semver: 7.5.3
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@5.60.1(eslint@8.44.0)(typescript@4.9.5):
+  /@typescript-eslint/parser@5.60.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-pHWlc3alg2oSMGwsU/Is8hbm3XFbcrb6P5wIxcQW9NsYBfnrubl/GhVVD/Jm/t8HXhA2WncoIRfBtnCgRGV96Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5378,10 +5398,10 @@ packages:
     dependencies:
       '@typescript-eslint/scope-manager': 5.60.1
       '@typescript-eslint/types': 5.60.1
-      '@typescript-eslint/typescript-estree': 5.60.1(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.60.1(typescript@5.4.2)
       debug: 4.3.4
       eslint: 8.44.0
-      typescript: 4.9.5
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5402,7 +5422,7 @@ packages:
       '@typescript-eslint/visitor-keys': 5.62.0
     dev: true
 
-  /@typescript-eslint/type-utils@5.60.1(eslint@8.44.0)(typescript@4.9.5):
+  /@typescript-eslint/type-utils@5.60.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-vN6UztYqIu05nu7JqwQGzQKUJctzs3/Hg7E2Yx8rz9J+4LgtIDFWjjl1gm3pycH0P3mHAcEUBd23LVgfrsTR8A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5412,17 +5432,17 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.60.1(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.60.1(eslint@8.44.0)(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.60.1(typescript@5.4.2)
+      '@typescript-eslint/utils': 5.60.1(eslint@8.44.0)(typescript@5.4.2)
       debug: 4.3.4
       eslint: 8.44.0
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/type-utils@5.62.0(eslint@8.44.0)(typescript@4.9.5):
+  /@typescript-eslint/type-utils@5.62.0(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-xsSQreu+VnfbqQpW5vnCJdq1Z3Q0U31qiWmRhr98ONQmcp/yhiPJFPq8MXiJVLiksmOKSjIldZzkebzHuCGzew==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5432,12 +5452,12 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.62.0(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.4.2)
+      '@typescript-eslint/utils': 5.62.0(eslint@8.44.0)(typescript@5.4.2)
       debug: 4.3.4
       eslint: 8.44.0
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5452,7 +5472,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree@5.60.1(typescript@4.9.5):
+  /@typescript-eslint/typescript-estree@5.60.1(typescript@5.4.2):
     resolution: {integrity: sha512-hkX70J9+2M2ZT6fhti5Q2FoU9zb+GeZK2SLP1WZlvUDqdMbEKhexZODD1WodNRyO8eS+4nScvT0dts8IdaBzfw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5467,13 +5487,13 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.5.3
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/typescript-estree@5.62.0(typescript@4.9.5):
+  /@typescript-eslint/typescript-estree@5.62.0(typescript@5.4.2):
     resolution: {integrity: sha512-CmcQ6uY7b9y694lKdRB8FEel7JbU/40iSAPomu++SjLMntB+2Leay2LO6i8VnJk58MtE9/nQSFIH6jpyRWyYzA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5488,13 +5508,13 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.5.3
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.4.2)
+      typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@5.60.1(eslint@8.44.0)(typescript@4.9.5):
+  /@typescript-eslint/utils@5.60.1(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-tiJ7FFdFQOWssFa3gqb94Ilexyw0JVxj6vBzaSpfN/8IhoKkDuSAenUKvsSHw2A/TMpJb26izIszTXaqygkvpQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5505,7 +5525,7 @@ packages:
       '@types/semver': 7.3.13
       '@typescript-eslint/scope-manager': 5.60.1
       '@typescript-eslint/types': 5.60.1
-      '@typescript-eslint/typescript-estree': 5.60.1(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.60.1(typescript@5.4.2)
       eslint: 8.44.0
       eslint-scope: 5.1.1
       semver: 7.5.3
@@ -5514,7 +5534,7 @@ packages:
       - typescript
     dev: true
 
-  /@typescript-eslint/utils@5.62.0(eslint@8.44.0)(typescript@4.9.5):
+  /@typescript-eslint/utils@5.62.0(eslint@8.44.0)(typescript@5.4.2):
     resolution: {integrity: sha512-n8oxjeb5aIbPFEtmQxQYOLI0i9n5ySBEY/ZEHHZqKQSFnxio1rv6dthascc9dLuwrL0RC5mPCxB7vnAVGAYWAQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5525,7 +5545,7 @@ packages:
       '@types/semver': 7.3.13
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/types': 5.62.0
-      '@typescript-eslint/typescript-estree': 5.62.0(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.4.2)
       eslint: 8.44.0
       eslint-scope: 5.1.1
       semver: 7.5.3
@@ -5704,6 +5724,7 @@ packages:
 
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
+    deprecated: Use your platform's native atob() and btoa() methods instead
     dev: true
 
   /abbrev@1.1.1:
@@ -8605,7 +8626,7 @@ packages:
       signal-exit: 4.0.2
     dev: true
 
-  /fork-ts-checker-webpack-plugin@7.3.0(typescript@4.9.5)(webpack@5.86.0):
+  /fork-ts-checker-webpack-plugin@7.3.0(typescript@5.4.2)(webpack@5.86.0):
     resolution: {integrity: sha512-IN+XTzusCjR5VgntYFgxbxVx3WraPRnKehBFrf00cMSrtUuW9MsG9dhL6MWpY6MkjC3wVwoujfCDgZZCQwbswA==}
     engines: {node: '>=12.13.0', yarn: '>=1.0.0'}
     peerDependencies:
@@ -8628,7 +8649,7 @@ packages:
       schema-utils: 3.3.0
       semver: 7.5.3
       tapable: 2.2.1
-      typescript: 4.9.5
+      typescript: 5.4.2
       webpack: 5.86.0(esbuild@0.17.19)
     dev: true
 
@@ -9608,6 +9629,7 @@ packages:
   /is-accessor-descriptor@0.1.6:
     resolution: {integrity: sha512-e1BM1qnDbMRG3ll2U9dSK0UMHuWOs3pY3AtcFsmvwPtKL3MML/Q86i+GilLfvqEs4GW+ExB91tQ3Ig9noDIZ+A==}
     engines: {node: '>=0.10.0'}
+    deprecated: Please upgrade to v0.1.7
     dependencies:
       kind-of: 3.2.2
     dev: true
@@ -9615,6 +9637,7 @@ packages:
   /is-accessor-descriptor@1.0.0:
     resolution: {integrity: sha512-m5hnHTkcVsPfqx3AKlyttIPb7J+XykHvJP2B9bZDjlhLIoEq4XoK64Vg7boZlVWYK6LUY94dYPEE7Lh0ZkZKcQ==}
     engines: {node: '>=0.10.0'}
+    deprecated: Please upgrade to v1.0.1
     dependencies:
       kind-of: 6.0.3
     dev: true
@@ -9675,6 +9698,7 @@ packages:
   /is-data-descriptor@0.1.4:
     resolution: {integrity: sha512-+w9D5ulSoBNlmw9OHn3U2v51SyoCd0he+bB3xMl62oijhrspxowjU+AIcDY0N3iEJbUEkB15IlMASQsxYigvXg==}
     engines: {node: '>=0.10.0'}
+    deprecated: Please upgrade to v0.1.5
     dependencies:
       kind-of: 3.2.2
     dev: true
@@ -9682,6 +9706,7 @@ packages:
   /is-data-descriptor@1.0.0:
     resolution: {integrity: sha512-jbRXy1FmtAoCjQkVmIVYwuuqDFUbaOeDjmed1tOGPrsMhtJA4rD9tkgA0F1qJ3gRFRXcHYVkdeaP50Q5rE/jLQ==}
     engines: {node: '>=0.10.0'}
+    deprecated: Please upgrade to v1.0.1
     dependencies:
       kind-of: 6.0.3
     dev: true
@@ -12417,6 +12442,7 @@ packages:
   /puppeteer@21.1.1:
     resolution: {integrity: sha512-2TLntjGA4qLrI9/8N0UK/5OoZJ2Ue7QgphN2SD+RsaHiha12AEiVyMGsB+i6LY1IoPAtEgYIjblQ7lw3kWDNRw==}
     engines: {node: '>=16.3.0'}
+    deprecated: < 21.5.0 is no longer supported
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': 1.7.0
@@ -14222,14 +14248,14 @@ packages:
   /tslib@2.6.0:
     resolution: {integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==}
 
-  /tsutils@3.21.0(typescript@4.9.5):
+  /tsutils@3.21.0(typescript@5.4.2):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
-      typescript: 4.9.5
+      typescript: 5.4.2
     dev: true
 
   /tuf-js@1.1.7:
@@ -14319,6 +14345,12 @@ packages:
   /typescript@4.9.5:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+    engines: {node: '>=14.17'}
     hasBin: true
     dev: true
 
