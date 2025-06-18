@@ -20,7 +20,7 @@
     "postinstall": "puppeteer install"
   },
   "private": true,
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.8.1",
   "engines": {
     "node": "22.16.0"
   },
