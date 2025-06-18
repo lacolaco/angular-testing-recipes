@@ -17,7 +17,7 @@
     "vistest": "./vistest/vistest.mjs",
     "vistest:check": "npm run vistest --check",
     "vistest:update": "npm run vistest --update",
-    "postinstall": "puppeteer install"
+    "postinstall": "puppeteer browsers install chrome"
   },
   "private": true,
   "packageManager": "pnpm@10.8.1",
