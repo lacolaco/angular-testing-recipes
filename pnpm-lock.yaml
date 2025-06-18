@@ -106,8 +106,8 @@ importers:
         specifier: ^14.4.3
         version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/jasmine':
-        specifier: ~4.3.0
-        version: 4.3.6
+        specifier: ~4.6.0
+        version: 4.6.5
       '@types/node':
         specifier: ^22.0.0
         version: 22.15.32
@@ -2357,8 +2357,8 @@ packages:
   '@types/http-proxy@1.17.16':
     resolution: {integrity: sha512-sdWoUajOB1cd0A8cRRQ1cfyWNbmFKLAqBB89Y8x5iYyG/mkJHc0YUH8pdWBy2omi9qtCpiIgGjuwO0dQST2l5w==}
 
-  '@types/jasmine@4.3.6':
-    resolution: {integrity: sha512-3N0FpQTeiWjm+Oo1WUYWguUS7E6JLceiGTriFrG8k5PU7zRLJCzLcWURU3wjMbZGS//a2/LgjsnO3QxIlwxt9g==}
+  '@types/jasmine@4.6.5':
+    resolution: {integrity: sha512-QgQkk8QL3vhML6msrckf7olLTwi+qeP5rLtmMeP4573HWlFw13xBX8M7YklKoP/Vu/gIXcwWYirTIa/8XVew9g==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -9888,7 +9888,7 @@ snapshots:
     dependencies:
       '@types/node': 22.15.32
 
-  '@types/jasmine@4.3.6': {}
+  '@types/jasmine@4.6.5': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -9960,7 +9960,7 @@ snapshots:
 
   '@types/testing-library__jasmine-dom@1.3.4':
     dependencies:
-      '@types/jasmine': 4.3.6
+      '@types/jasmine': 4.6.5
 
   '@types/uuid@9.0.8': {}
 
