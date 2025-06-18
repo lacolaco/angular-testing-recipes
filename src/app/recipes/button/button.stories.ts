@@ -1,4 +1,4 @@
-import { Meta, moduleMetadata, Story } from '@storybook/angular';
+import { Meta, moduleMetadata, StoryFn } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   decorators: [moduleMetadata({ imports: [ButtonComponent] })],
 } as Meta;
 
-export const defaultButton: Story<ButtonComponent> = (args) => ({
+export const defaultButton: StoryFn<ButtonComponent> = (args) => ({
   template: `<button app-button [appearance]="appearance">BUTTON</button>`,
   props: args,
 });

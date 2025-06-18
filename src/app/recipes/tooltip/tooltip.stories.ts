@@ -1,4 +1,4 @@
-import { Meta, moduleMetadata, Story } from '@storybook/angular';
+import { Meta, moduleMetadata, StoryFn } from '@storybook/angular';
 import { TooltipDirective } from './tooltip.directive';
 
 export default {
@@ -19,7 +19,7 @@ export default {
   },
 } as Meta;
 
-export const SimpleUsage: Story<{ message: string }> = (args) => ({
+export const SimpleUsage: StoryFn<{ message: string }> = (args) => ({
   template: `<div>Header</div><div id="tooltipHost" [appTooltip]="message">Tooltip host</div><div>Footer</div>`,
   props: args,
 });
