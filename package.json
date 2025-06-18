@@ -16,12 +16,13 @@
     "storybook:build": "ng run angular-testing-recipes:build-storybook",
     "vistest": "./vistest/vistest.mjs",
     "vistest:check": "npm run vistest --check",
-    "vistest:update": "npm run vistest --update"
+    "vistest:update": "npm run vistest --update",
+    "postinstall": "puppeteer install"
   },
   "private": true,
   "packageManager": "pnpm@8.15.9",
   "engines": {
-    "node": "^18.16.1"
+    "node": "22.16.0"
   },
   "dependencies": {
     "@angular/animations": "^18.2.13",
