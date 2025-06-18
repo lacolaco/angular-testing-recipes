@@ -25,13 +25,11 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
       }
     `,
   ],
-
   host: {
     class: 'app-alert',
     '[style.display]': 'isClosed ? "none" : "block"',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgIf],
 })
 export class AlertComponent {
