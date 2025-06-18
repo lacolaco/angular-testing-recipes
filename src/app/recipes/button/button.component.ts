@@ -18,7 +18,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
       }
     `,
   ],
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+
   host: {
     class: 'app-button',
     '[class.app-button-stroked]': "appearance === 'stroked'",

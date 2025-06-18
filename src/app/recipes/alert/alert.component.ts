@@ -25,7 +25,7 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
       }
     `,
   ],
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+
   host: {
     class: 'app-alert',
     '[style.display]': 'isClosed ? "none" : "block"',

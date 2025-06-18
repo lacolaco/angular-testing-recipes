@@ -13,7 +13,10 @@ export class ToastService {
     overlay: OverlayRef;
   } | null = null;
 
-  constructor(private readonly overlay: Overlay, private readonly injector: Injector) {}
+  constructor(
+    private readonly overlay: Overlay,
+    private readonly injector: Injector,
+  ) {}
 
   show(message: string, options: { durationMs?: number } = {}) {
     const context = new ToastContext(message);
