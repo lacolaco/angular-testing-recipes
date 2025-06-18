@@ -12,8 +12,8 @@ importers:
         specifier: ^19.2.14
         version: 19.2.14(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))
       '@angular/cdk':
-        specifier: ^18.2.14
-        version: 18.2.14(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
+        specifier: ^19.2.18
+        version: 19.2.18(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/common':
         specifier: ^19.2.14
         version: 19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
@@ -352,11 +352,11 @@ packages:
       tailwindcss:
         optional: true
 
-  '@angular/cdk@18.2.14':
-    resolution: {integrity: sha512-vDyOh1lwjfVk9OqoroZAP8pf3xxKUvyl+TVR8nJxL4c5fOfUFkD7l94HaanqKSRwJcI2xiztuu92IVoHn8T33Q==}
+  '@angular/cdk@19.2.18':
+    resolution: {integrity: sha512-aGMHOYK/VV9PhxGTUDwiu/4ozoR/RKz8cimI+QjRxEBhzn4EPqjUDSganvlhmgS7cTN3+aqozdvF/GopMRJjLg==}
     peerDependencies:
-      '@angular/common': ^18.0.0 || ^19.0.0
-      '@angular/core': ^18.0.0 || ^19.0.0
+      '@angular/common': ^19.0.0 || ^20.0.0
+      '@angular/core': ^19.0.0 || ^20.0.0
       rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/cli@19.2.15':
@@ -7219,14 +7219,13 @@ snapshots:
       - tsx
       - yaml
 
-  '@angular/cdk@18.2.14(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)':
+  '@angular/cdk@19.2.18(@angular/common@19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)':
     dependencies:
       '@angular/common': 19.2.14(@angular/core@19.2.14(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/core': 19.2.14(rxjs@7.8.2)(zone.js@0.15.1)
+      parse5: 7.3.0
       rxjs: 7.8.2
       tslib: 2.8.1
-    optionalDependencies:
-      parse5: 7.3.0
 
   '@angular/cli@19.2.15(@types/node@22.15.32)(chokidar@4.0.3)':
     dependencies:
