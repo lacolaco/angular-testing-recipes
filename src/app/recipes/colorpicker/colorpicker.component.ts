@@ -25,7 +25,6 @@ let nextUniqueId = 0;
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgFor],
 })
 export class ColorpickerComponent implements ControlValueAccessor {
