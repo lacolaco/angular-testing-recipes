@@ -23,7 +23,7 @@ export class ToastContext {
       transition('* => void, * => hidden', animate('100ms')),
     ]),
   ],
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+
   host: {
     role: 'status',
     'aria-live': 'polite',
@@ -38,7 +38,10 @@ export class ToastComponent implements OnDestroy {
   readonly afterDismissed = new Subject<void>();
   private destroyed = false;
 
-  constructor(private readonly cdRef: ChangeDetectorRef, public readonly context: ToastContext) {}
+  constructor(
+    private readonly cdRef: ChangeDetectorRef,
+    public readonly context: ToastContext,
+  ) {}
 
   ngOnDestroy() {
     this.destroyed = true;

@@ -1,4 +1,3 @@
-/* eslint-disable @angular-eslint/no-host-metadata-property */
 import { Component, ComponentRef, Directive, HostListener, Input, ViewContainerRef } from '@angular/core';
 
 @Component({

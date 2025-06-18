@@ -59,7 +59,10 @@ export class ColorpickerComponent implements ControlValueAccessor {
 
   private _uid = `app-colorpicker-${nextUniqueId++}`;
 
-  constructor(private readonly cdRef: ChangeDetectorRef, @Optional() ngControl: NgControl) {
+  constructor(
+    private readonly cdRef: ChangeDetectorRef,
+    @Optional() ngControl: NgControl,
+  ) {
     if (ngControl) {
       ngControl.valueAccessor = this;
     }
