@@ -1,5 +1,5 @@
 <div role="listbox" [attr.aria-activedescendant]="selectedOptionId ?? null">
-  <ng-container *ngFor="let color of colors; let index = index">
+  @for (color of colors; track color; let index = $index) {
     <div
       #option
       role="option"
@@ -11,5 +11,5 @@
       (click)="onSelect(color)"
       [attr.aria-selected]="color === value ? 'true' : 'false'"
     ></div>
-  </ng-container>
+  }
 </div>

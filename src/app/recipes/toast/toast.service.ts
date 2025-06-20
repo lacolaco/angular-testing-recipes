@@ -1,6 +1,6 @@
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { Injectable, Injector } from '@angular/core';
+import { Injectable, Injector, inject } from '@angular/core';
 import { timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ToastComponent, ToastContext } from './toast.component';
@@ -9,14 +9,12 @@ const defaultToastDurationMs = 3000;
 
 @Injectable({ providedIn: 'root' })
 export class ToastService {
+  private readonly overlay = inject(Overlay);
+  private readonly injector = inject(Injector);
+
   private openingToastRef: {
     overlay: OverlayRef;
   } | null = null;
-
-  constructor(
-    private readonly overlay: Overlay,
-    private readonly injector: Injector,
-  ) {}
 
   show(message: string, options: { durationMs?: number } = {}) {
     const context = new ToastContext(message);

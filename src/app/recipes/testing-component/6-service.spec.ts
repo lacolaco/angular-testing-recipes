@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, inject } from '@angular/core';
 import { fireEvent, render, screen } from '@testing-library/angular';
 
 @Injectable({ providedIn: 'root' })
@@ -17,7 +17,8 @@ export class AuthService {
   standalone: true,
 })
 export class HeaderComponent {
-  constructor(private authService: AuthService) {}
+  private authService = inject(AuthService);
+
   signIn() {
     this.authService.signIn();
   }

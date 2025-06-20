@@ -1,5 +1,5 @@
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
-import { NgIf } from '@angular/common';
+
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -8,6 +8,7 @@ import {
   HostBinding,
   Input,
   Output,
+  inject,
 } from '@angular/core';
 
 type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' | 'info';
@@ -16,7 +17,9 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
   selector: 'app-alert',
   template: `
     <ng-content></ng-content>
-    <button *ngIf="dismissible" (click)="close()" type="button" aria-label="Close">x</button>
+    @if (dismissible) {
+      <button (click)="close()" type="button" aria-label="Close">x</button>
+    }
   `,
   styles: [
     `
@@ -30,9 +33,11 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
     '[style.display]': 'isClosed ? "none" : "block"',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf],
+  imports: [],
 })
 export class AlertComponent {
+  private readonly cdRef = inject(ChangeDetectorRef);
+
   /**
    * @todo Not implemented
    */
@@ -59,8 +64,6 @@ export class AlertComponent {
   }
 
   isClosed = false;
-
-  constructor(private readonly cdRef: ChangeDetectorRef) {}
 
   close() {
     this.isClosed = true;

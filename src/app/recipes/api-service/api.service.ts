@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Recipe } from './model';
@@ -8,7 +8,7 @@ import { Recipe } from './model';
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private readonly http: HttpClient) {}
+  private readonly http = inject(HttpClient);
 
   async getRecipes(): Promise<Recipe[]> {
     return lastValueFrom(this.http.get<{ data: Recipe[] }>('/api/recipes').pipe(map((resp) => resp.data)));

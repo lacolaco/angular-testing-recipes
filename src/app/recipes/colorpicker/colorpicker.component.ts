@@ -1,12 +1,11 @@
-import { NgFor } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   EventEmitter,
   Input,
-  Optional,
   Output,
+  inject,
 } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 
@@ -25,9 +24,11 @@ let nextUniqueId = 0;
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgFor],
+  imports: [],
 })
 export class ColorpickerComponent implements ControlValueAccessor {
+  private readonly cdRef = inject(ChangeDetectorRef);
+
   @Input()
   colors: Color[] = [];
 
@@ -58,10 +59,9 @@ export class ColorpickerComponent implements ControlValueAccessor {
 
   private _uid = `app-colorpicker-${nextUniqueId++}`;
 
-  constructor(
-    private readonly cdRef: ChangeDetectorRef,
-    @Optional() ngControl: NgControl,
-  ) {
+  constructor() {
+    const ngControl = inject(NgControl, { optional: true });
+
     if (ngControl) {
       ngControl.valueAccessor = this;
     }
