@@ -1,4 +1,4 @@
-import { Component, ComponentRef, Directive, HostListener, Input, ViewContainerRef } from '@angular/core';
+import { Component, ComponentRef, Directive, HostListener, Input, ViewContainerRef, inject } from '@angular/core';
 
 @Component({
   template: `<div class="tooltip-pane">
@@ -32,11 +32,11 @@ export class TooltipComponent {
   standalone: true,
 })
 export class TooltipDirective {
+  private readonly vcRef = inject(ViewContainerRef);
+
   @Input('appTooltip') message = '';
 
   private tooltipInstance: ComponentRef<TooltipComponent> | null = null;
-
-  constructor(private readonly vcRef: ViewContainerRef) {}
 
   @HostListener('mouseenter', ['$event'])
   onMouseEnter($event: MouseEvent) {

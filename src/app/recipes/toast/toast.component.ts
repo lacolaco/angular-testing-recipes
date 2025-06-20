@@ -1,5 +1,5 @@
 import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, inject } from '@angular/core';
 import { Subject } from 'rxjs';
 
 export class ToastContext {
@@ -33,15 +33,13 @@ export class ToastContext {
   standalone: true,
 })
 export class ToastComponent implements OnDestroy {
+  private readonly cdRef = inject(ChangeDetectorRef);
+  readonly context = inject(ToastContext);
+
   animationState = 'void';
 
   readonly afterDismissed = new Subject<void>();
   private destroyed = false;
-
-  constructor(
-    private readonly cdRef: ChangeDetectorRef,
-    public readonly context: ToastContext,
-  ) {}
 
   ngOnDestroy() {
     this.destroyed = true;
