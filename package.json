@@ -52,10 +52,8 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.29.0",
     "@html-eslint/eslint-plugin": "0.41.0",
-    "@storybook/addon-actions": "8.6.14",
-    "@storybook/addon-essentials": "8.6.14",
-    "@storybook/addon-links": "8.6.14",
-    "@storybook/angular": "8.6.14",
+    "@storybook/addon-links": "9.0.12",
+    "@storybook/angular": "9.0.12",
     "@testing-library/angular": "^17.0.0",
     "@testing-library/jasmine-dom": "^1.3.0",
     "@testing-library/user-event": "^14.4.3",
@@ -76,12 +74,13 @@
     "prettier": "^3.0.0",
     "puppeteer": "^22.6.4",
     "reg-cli": "^0.18.0",
-    "storybook": "8.6.14",
+    "storybook": "9.0.12",
     "storycap": "^5.0.0",
     "stylelint": "^16.0.0",
     "stylelint-config-standard": "^38.0.0",
     "stylelint-prettier": "^5.0.0",
     "typescript": "~5.8.3",
-    "zx": "^7.0.0"
+    "zx": "^7.0.0",
+    "@storybook/addon-docs": "9.0.12"
   }
 }
