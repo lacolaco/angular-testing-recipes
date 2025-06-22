@@ -1,5 +1,5 @@
 <div role="listbox" [attr.aria-activedescendant]="selectedOptionId ?? null">
-  @for (color of colors; track color; let index = $index) {
+  @for (color of colors(); track color; let index = $index) {
     <div
       #option
       role="option"

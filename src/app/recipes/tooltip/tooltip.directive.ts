@@ -1,4 +1,4 @@
-import { Component, ComponentRef, Directive, HostListener, Input, ViewContainerRef, inject } from '@angular/core';
+import { Component, ComponentRef, Directive, HostListener, ViewContainerRef, inject, input } from '@angular/core';
 
 @Component({
   template: `<div class="tooltip-pane">
@@ -34,7 +34,7 @@ export class TooltipComponent {
 export class TooltipDirective {
   private readonly vcRef = inject(ViewContainerRef);
 
-  @Input('appTooltip') message = '';
+  readonly message = input('', { alias: 'appTooltip' });
 
   private tooltipInstance: ComponentRef<TooltipComponent> | null = null;
 
@@ -50,7 +50,7 @@ export class TooltipDirective {
 
   private show() {
     this.tooltipInstance = this.vcRef.createComponent(TooltipComponent);
-    this.tooltipInstance.instance.message = this.message;
+    this.tooltipInstance.instance.message = this.message();
     this.tooltipInstance.changeDetectorRef.detectChanges();
   }
 

@@ -4,11 +4,11 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  EventEmitter,
   HostBinding,
   Input,
-  Output,
   inject,
+  input,
+  output,
 } from '@angular/core';
 
 type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' | 'info';
@@ -16,18 +16,17 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
 @Component({
   selector: 'app-alert',
   template: `
-    <ng-content></ng-content>
+    <ng-content />
     @if (dismissible) {
       <button (click)="close()" type="button" aria-label="Close">x</button>
     }
   `,
-  styles: [
-    `
-      :host {
-        display: block;
-      }
-    `,
-  ],
+  styles: `
+    :host {
+      display: block;
+    }
+  `,
+
   host: {
     class: 'app-alert',
     '[style.display]': 'isClosed ? "none" : "block"',
@@ -41,8 +40,7 @@ export class AlertComponent {
   /**
    * @todo Not implemented
    */
-  @Input()
-  context: AlertContext = 'secondary';
+  readonly context = input<AlertContext>('secondary');
 
   @Input()
   get dismissible(): boolean {
@@ -55,8 +53,7 @@ export class AlertComponent {
   }
   private _dismissible = false;
 
-  @Output()
-  readonly closed = new EventEmitter<void>();
+  readonly closed = output<void>();
 
   @HostBinding('attr.role')
   get role() {
@@ -67,6 +64,7 @@ export class AlertComponent {
 
   close() {
     this.isClosed = true;
+    // TODO: The 'emit' function requires a mandatory void argument
     this.closed.emit();
     this.cdRef.markForCheck();
   }

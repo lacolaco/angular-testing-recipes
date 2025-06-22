@@ -1,12 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  inject,
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, inject, input, output } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 type Color = string;
@@ -16,21 +8,18 @@ let nextUniqueId = 0;
 @Component({
   selector: 'app-colorpicker',
   templateUrl: './colorpicker.component.html',
-  styles: [
-    `
-      :host {
-        display: block;
-      }
-    `,
-  ],
+  styles: `
+    :host {
+      display: block;
+    }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
 })
 export class ColorpickerComponent implements ControlValueAccessor {
   private readonly cdRef = inject(ChangeDetectorRef);
 
-  @Input()
-  colors: Color[] = [];
+  readonly colors = input<Color[]>([]);
 
   @Input()
   set value(newValue: Color | null) {
@@ -45,15 +34,14 @@ export class ColorpickerComponent implements ControlValueAccessor {
   }
   private _value: Color | null = null;
 
-  @Output()
-  valueChange = new EventEmitter<Color | null>();
+  readonly valueChange = output<Color | null>();
 
   get id(): string {
     return this._uid;
   }
 
   get selectedOptionId(): string | null {
-    const selectedColorIndex = this.colors.findIndex((color) => color === this.value);
+    const selectedColorIndex = this.colors().findIndex((color) => color === this.value);
     return selectedColorIndex < 0 ? null : this.getOptionId(selectedColorIndex);
   }
 
