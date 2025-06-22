@@ -1,21 +1,22 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { screen, render, fireEvent } from '@testing-library/angular';
 
 @Component({
   selector: 'app-toast',
   template: `
     <div>
-      <p>{{ message }}</p>
+      <p>{{ message() }}</p>
       <button (click)="close()">Close</button>
     </div>
   `,
   standalone: true,
 })
 export class ToastComponent {
-  @Input() message = '';
-  @Output() closed = new EventEmitter<void>();
+  readonly message = input('');
+  readonly closed = output<void>();
 
   close() {
+    // TODO: The 'emit' function requires a mandatory void argument
     this.closed.emit();
   }
 }

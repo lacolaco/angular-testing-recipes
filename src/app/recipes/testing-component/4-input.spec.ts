@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { screen, render } from '@testing-library/angular';
 
 @Component({
   selector: 'app-title',
-  template: ` <h1>{{ appName }}</h1> `,
+  template: ` <h1>{{ appName() }}</h1> `,
   standalone: true,
 })
 export class TitleComponent {
-  @Input() appName = '';
+  readonly appName = input('');
 }
 
 describe('TitleComponent', () => {
