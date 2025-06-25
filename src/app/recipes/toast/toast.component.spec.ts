@@ -9,6 +9,6 @@ describe('ToastComponent', () => {
       providers: [{ provide: ToastContext, useValue: new ToastContext('TEXT') }],
     });
 
-    expect(container).toHaveTextContent('TEXT');
+    expect(container.textContent).toContain('TEXT');
   });
 });

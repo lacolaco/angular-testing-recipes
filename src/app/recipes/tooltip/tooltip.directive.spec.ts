@@ -9,7 +9,7 @@ describe('TooltipDirective', () => {
       imports: [TooltipDirective],
       componentProperties: { message },
     });
-    expect(queryByText('HOST')).toBeInTheDocument();
+    expect(queryByText('HOST')).not.toBeNull();
     expect(queryByText(message)).toBeNull();
   });
 
@@ -21,8 +21,8 @@ describe('TooltipDirective', () => {
     });
     const host = getByText('HOST');
     await userEvent.hover(host);
-    expect(queryByText(message)).toBeInTheDocument();
+    expect(queryByText(message)).not.toBeNull();
     await userEvent.unhover(host);
-    expect(queryByText(message)).not.toBeInTheDocument();
+    expect(queryByText(message)).toBeNull();
   });
 });

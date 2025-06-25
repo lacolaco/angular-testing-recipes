@@ -7,7 +7,7 @@ describe('ColorpickerComponent', () => {
     const { getByRole } = await render(`<app-colorpicker></app-colorpicker>`, {
       imports: [ColorpickerComponent],
     });
-    expect(getByRole('listbox')).toBeInTheDocument();
+    expect(getByRole('listbox')).not.toBeNull();
   });
 
   it('should show the color options', async () => {
@@ -25,7 +25,7 @@ describe('ColorpickerComponent', () => {
       componentProperties: { colors: ['#fff', '#eee'] },
     });
     expect(queryAllByRole('option', { selected: true }).length).toBe(0);
-    expect(getByRole('listbox')).not.toHaveAttribute('aria-activedescendant');
+    expect(getByRole('listbox').hasAttribute('aria-activedescendant')).toBe(false);
   });
 
   it('should set selected color on click a color option', async () => {
@@ -40,8 +40,8 @@ describe('ColorpickerComponent', () => {
     detectChanges();
     const selectedOptions = queryAllByRole('option', { selected: true });
     expect(selectedOptions.length).toBe(1);
-    expect(selectedOptions[0]).toHaveAttribute('title', '#fff');
-    expect(getByRole('listbox')).toHaveAttribute('aria-activedescendant', selectedOptions[0].id);
+    expect(selectedOptions[0].getAttribute('title')).toBe('#fff');
+    expect(getByRole('listbox').getAttribute('aria-activedescendant')).toBe(selectedOptions[0].id);
   });
 
   it('should set selected color from [value] input', async () => {
@@ -56,9 +56,9 @@ describe('ColorpickerComponent', () => {
         },
       },
     );
-    expect(getByRole('option', { selected: true })).toHaveAttribute('title', '#eee');
+    expect(getByRole('option', { selected: true }).getAttribute('title')).toBe('#eee');
     await rerender({ componentProperties: { colors, selectedValue: '#fff' } });
-    expect(getByRole('option', { selected: true })).toHaveAttribute('title', '#fff');
+    expect(getByRole('option', { selected: true }).getAttribute('title')).toBe('#fff');
   });
 
   it('should emit (valueChange) event on click a color option', async () => {
@@ -88,7 +88,7 @@ describe('ColorpickerComponent', () => {
           },
         },
       );
-      expect(getByRole('option', { selected: true })).toHaveAttribute('title', '#eee');
+      expect(getByRole('option', { selected: true }).getAttribute('title')).toBe('#eee');
     });
 
     it('should pass the clicked value to form control', async () => {

@@ -9,6 +9,6 @@ describe('CardComponent', () => {
     });
 
     const card = getByText('TEXT');
-    expect(card).toBeInTheDocument();
+    expect(card).not.toBeNull();
   });
 });

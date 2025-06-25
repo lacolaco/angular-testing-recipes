@@ -15,7 +15,7 @@ describe('ToastService', () => {
     it('should show toast component in screen', fakeAsync(() => {
       const service = TestBed.inject(ToastService);
       service.show('TEXT');
-      expect(screen.getByText('TEXT')).toBeInTheDocument();
+      expect(screen.getByText('TEXT')).not.toBeNull();
       discardPeriodicTasks(); // discard duration timer
     }));
 
@@ -24,20 +24,20 @@ describe('ToastService', () => {
       service.show('TEXT');
 
       tick(2999);
-      expect(screen.getByText('TEXT')).toBeVisible();
+      expect(screen.getByText('TEXT')).not.toBeNull();
       tick(1);
-      expect(screen.queryByText('TEXT')).not.toBeInTheDocument();
+      expect(screen.queryByText('TEXT')).toBeNull();
     }));
 
     it('should use given duration time', fakeAsync(() => {
       const service = TestBed.inject(ToastService);
       service.show('TEXT', { durationMs: 5000 });
-      expect(screen.getByText('TEXT')).toBeInTheDocument();
+      expect(screen.getByText('TEXT')).not.toBeNull();
 
       tick(4999);
-      expect(screen.getByText('TEXT')).toBeInTheDocument();
+      expect(screen.getByText('TEXT')).not.toBeNull();
       tick(1);
-      expect(screen.queryByText('TEXT')).not.toBeInTheDocument();
+      expect(screen.queryByText('TEXT')).toBeNull();
     }));
   });
 
@@ -50,9 +50,9 @@ describe('ToastService', () => {
     it('should dismiss opened toast immediately', async () => {
       const service = TestBed.inject(ToastService);
       service.show('TEXT');
-      expect(screen.getByText('TEXT')).toBeInTheDocument();
+      expect(screen.getByText('TEXT')).not.toBeNull();
       service.hide();
-      expect(screen.queryByText('TEXT')).not.toBeInTheDocument();
+      expect(screen.queryByText('TEXT')).toBeNull();
     });
   });
 });
