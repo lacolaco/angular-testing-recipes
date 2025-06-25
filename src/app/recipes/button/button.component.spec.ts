@@ -7,7 +7,7 @@ describe('ButtonComponent', () => {
       imports: [ButtonComponent],
     });
 
-    expect(getByRole('button', { name: 'TEXT' })).toBeInTheDocument();
+    expect(getByRole('button', { name: 'TEXT' })).not.toBeNull();
   });
 
   describe('appearance', () => {
@@ -16,7 +16,7 @@ describe('ButtonComponent', () => {
         imports: [ButtonComponent],
       });
 
-      expect(getByRole('button', { name: 'TEXT' })).toHaveClass('app-button-stroked');
+      expect(getByRole('button', { name: 'TEXT' }).className.split(' ')).toContain('app-button-stroked');
     });
   });
 });

@@ -8,7 +8,7 @@ describe('AlertComponent', () => {
       imports: [AlertComponent],
     });
 
-    expect(getByRole('alert')).toHaveTextContent('TEXT');
+    expect(getByRole('alert').textContent).toContain('TEXT');
   });
 
   // TODO: add specs for context
@@ -17,13 +17,13 @@ describe('AlertComponent', () => {
     it('should render an alertdialog', async () => {
       const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { imports: [AlertComponent] });
 
-      expect(getByRole('alertdialog')).toHaveTextContent('TEXT');
+      expect(getByRole('alertdialog').textContent).toContain('TEXT');
     });
 
     it('should have a close button', async () => {
       const { getByRole } = await render(`<app-alert dismissible>TEXT</app-alert>`, { imports: [AlertComponent] });
 
-      expect(getByRole('button', { name: /Close/i })).toBeInTheDocument();
+      expect(getByRole('button', { name: /Close/i })).not.toBeNull();
     });
 
     it('should dismiss after close button click', async () => {
@@ -34,7 +34,7 @@ describe('AlertComponent', () => {
       await userEvent.click(getByRole('button', { name: /Close/i }));
 
       await waitFor(() => {
-        expect(queryByRole('alertdialog')).not.toBeInTheDocument();
+        expect(queryByRole('alertdialog')).toBeNull();
       });
     });
 
