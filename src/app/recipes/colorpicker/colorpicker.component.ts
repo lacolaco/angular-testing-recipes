@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, inject, input, output } from '@angular/core';
-import { ControlValueAccessor, NgControl } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, computed, effect, input, model } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 type Color = string;
 
@@ -7,52 +7,50 @@ let nextUniqueId = 0;
 
 @Component({
   selector: 'app-colorpicker',
-  templateUrl: './colorpicker.component.html',
+  template: `
+    <div role="listbox" [attr.aria-activedescendant]="selectedOptionId() ?? null">
+      @for (color of colors(); track color; let index = $index) {
+        <div
+          #option
+          role="option"
+          style="border-radius: 4px; height: 16px; width: 16px"
+          [style.background-color]="color"
+          [attr.tab-index]="0"
+          [attr.id]="getOptionId(index)"
+          [title]="color"
+          (click)="onSelect(color)"
+          [attr.aria-selected]="color === value() ? 'true' : 'false'"
+        ></div>
+      }
+    </div>
+  `,
   styles: `
     :host {
       display: block;
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [],
+  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: ColorpickerComponent, multi: true }],
 })
 export class ColorpickerComponent implements ControlValueAccessor {
-  private readonly cdRef = inject(ChangeDetectorRef);
-
   readonly colors = input<Color[]>([]);
 
-  @Input()
-  set value(newValue: Color | null) {
-    this._value = newValue ?? null;
-
-    this.onControlChange(this.value);
-    this.cdRef.markForCheck();
-  }
-
-  get value(): Color | null {
-    return this._value;
-  }
-  private _value: Color | null = null;
-
-  readonly valueChange = output<Color | null>();
+  readonly value = model<Color | null>(null);
 
   get id(): string {
     return this._uid;
   }
-
-  get selectedOptionId(): string | null {
-    const selectedColorIndex = this.colors().findIndex((color) => color === this.value);
-    return selectedColorIndex < 0 ? null : this.getOptionId(selectedColorIndex);
-  }
-
   private _uid = `app-colorpicker-${nextUniqueId++}`;
 
-  constructor() {
-    const ngControl = inject(NgControl, { optional: true });
+  readonly selectedOptionId = computed(() => {
+    const selectedColorIndex = this.colors().findIndex((color) => color === this.value());
+    return selectedColorIndex < 0 ? null : this.getOptionId(selectedColorIndex);
+  });
 
-    if (ngControl) {
-      ngControl.valueAccessor = this;
-    }
+  constructor() {
+    effect(() => {
+      this.onControlChange(this.value());
+    });
   }
 
   getOptionId(index: number) {
@@ -60,9 +58,7 @@ export class ColorpickerComponent implements ControlValueAccessor {
   }
 
   onSelect(color: Color) {
-    this.value = color;
-
-    this.valueChange.emit(this.value);
+    this.value.set(color);
     this.onControlTouched();
   }
 
@@ -71,7 +67,7 @@ export class ColorpickerComponent implements ControlValueAccessor {
   private onControlTouched: () => void = () => {};
 
   writeValue(value: Color | null) {
-    this.value = value;
+    this.value.set(value);
   }
 
   registerOnChange(fn: (value: Color | null) => void) {

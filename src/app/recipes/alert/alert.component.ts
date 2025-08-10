@@ -1,15 +1,4 @@
-import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
-
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  HostBinding,
-  Input,
-  inject,
-  input,
-  output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, booleanAttribute, computed, input, output, signal } from '@angular/core';
 
 type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' | 'info';
 
@@ -17,7 +6,7 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
   selector: 'app-alert',
   template: `
     <ng-content />
-    @if (dismissible) {
+    @if (dismissible()) {
       <button (click)="close()" type="button" aria-label="Close">x</button>
     }
   `,
@@ -29,43 +18,30 @@ type AlertContext = 'primary' | 'secondary' | 'danger' | 'warning' | 'success' |
 
   host: {
     class: 'app-alert',
-    '[style.display]': 'isClosed ? "none" : "block"',
+    '[style.display]': 'isClosed() ? "none" : "block"',
+    '[attr.role]': 'role()',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
 })
 export class AlertComponent {
-  private readonly cdRef = inject(ChangeDetectorRef);
-
   /**
    * @todo Not implemented
    */
   readonly context = input<AlertContext>('secondary');
 
-  @Input()
-  get dismissible(): boolean {
-    return this._dismissible;
-  }
-
-  set dismissible(value: BooleanInput) {
-    this._dismissible = coerceBooleanProperty(value);
-    this.cdRef.markForCheck();
-  }
-  private _dismissible = false;
+  readonly dismissible = input(false, { transform: booleanAttribute });
 
   readonly closed = output<void>();
 
-  @HostBinding('attr.role')
-  get role() {
-    return this.isClosed ? null : this.dismissible ? 'alertdialog' : 'alert';
-  }
+  readonly role = computed(() => {
+    return this.isClosed() ? null : this.dismissible() ? 'alertdialog' : 'alert';
+  });
 
-  isClosed = false;
+  readonly isClosed = signal(false);
 
   close() {
-    this.isClosed = true;
-    // TODO: The 'emit' function requires a mandatory void argument
+    this.isClosed.set(true);
     this.closed.emit();
-    this.cdRef.markForCheck();
   }
 }

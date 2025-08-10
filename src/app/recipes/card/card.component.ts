@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-card',
-  templateUrl: './card.component.html',
+  template: '<div><ng-content /></div>',
   styles: `
     :host {
       display: block;
