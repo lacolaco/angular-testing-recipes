@@ -1,10 +1,11 @@
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { render } from '@testing-library/angular';
+import userEvent from '@testing-library/user-event';
 import { ColorpickerComponent } from './colorpicker.component';
 
 describe('ColorpickerComponent', () => {
   it('should show a listbox for colors', async () => {
-    const { getByRole } = await render(`<app-colorpicker></app-colorpicker>`, {
+    const { getByRole } = await render(`<app-colorpicker />`, {
       imports: [ColorpickerComponent],
     });
     expect(getByRole('listbox')).not.toBeNull();
@@ -12,7 +13,7 @@ describe('ColorpickerComponent', () => {
 
   it('should show the color options', async () => {
     const colors = ['#fff', '#eee'];
-    const { getAllByRole } = await render(`<app-colorpicker [colors]="colors"></app-colorpicker>`, {
+    const { getAllByRole } = await render(`<app-colorpicker [colors]="colors" />`, {
       imports: [ColorpickerComponent],
       componentProperties: { colors },
     });
@@ -20,7 +21,7 @@ describe('ColorpickerComponent', () => {
   });
 
   it('should set selected color empty by default', async () => {
-    const { queryAllByRole, getByRole } = await render(`<app-colorpicker [colors]="colors"></app-colorpicker>`, {
+    const { queryAllByRole, getByRole } = await render(`<app-colorpicker [colors]="colors"/>`, {
       imports: [ColorpickerComponent],
       componentProperties: { colors: ['#fff', '#eee'] },
     });
@@ -30,7 +31,7 @@ describe('ColorpickerComponent', () => {
 
   it('should set selected color on click a color option', async () => {
     const { getByTitle, queryAllByRole, getByRole, detectChanges } = await render(
-      `<app-colorpicker [colors]="colors"></app-colorpicker>`,
+      `<app-colorpicker [colors]="colors"/>`,
       {
         imports: [ColorpickerComponent],
         componentProperties: { colors: ['#fff', '#eee'] },
@@ -46,16 +47,13 @@ describe('ColorpickerComponent', () => {
 
   it('should set selected color from [value] input', async () => {
     const colors = ['#fff', '#eee'];
-    const { getByRole, rerender } = await render(
-      `<app-colorpicker [colors]="colors" [value]="selectedValue"></app-colorpicker>`,
-      {
-        imports: [ColorpickerComponent],
-        componentProperties: {
-          colors,
-          selectedValue: '#eee',
-        },
+    const { getByRole, rerender } = await render(`<app-colorpicker [colors]="colors" [value]="selectedValue"/>`, {
+      imports: [ColorpickerComponent],
+      componentProperties: {
+        colors,
+        selectedValue: '#eee',
       },
-    );
+    });
     expect(getByRole('option', { selected: true }).getAttribute('title')).toBe('#eee');
     await rerender({ componentProperties: { colors, selectedValue: '#fff' } });
     expect(getByRole('option', { selected: true }).getAttribute('title')).toBe('#fff');
@@ -63,13 +61,10 @@ describe('ColorpickerComponent', () => {
 
   it('should emit (valueChange) event on click a color option', async () => {
     const onChange = jasmine.createSpy();
-    const { getByTitle } = await render(
-      `<app-colorpicker [colors]="colors" (valueChange)="onChange($event)"></app-colorpicker>`,
-      {
-        imports: [ColorpickerComponent],
-        componentProperties: { colors: ['#fff', '#eee'], onChange },
-      },
-    );
+    const { getByTitle } = await render(`<app-colorpicker [colors]="colors" (valueChange)="onChange($event)"/>`, {
+      imports: [ColorpickerComponent],
+      componentProperties: { colors: ['#fff', '#eee'], onChange },
+    });
     getByTitle('#fff').click();
 
     expect(onChange).toHaveBeenCalledWith('#fff');
@@ -78,32 +73,26 @@ describe('ColorpickerComponent', () => {
   describe('with Angular Forms', () => {
     it('should be set value from form control', async () => {
       const formControl = new FormControl('#eee');
-      const { getByRole } = await render(
-        `<app-colorpicker [colors]="colors" [formControl]="formControl"></app-colorpicker>`,
-        {
-          imports: [ColorpickerComponent, ReactiveFormsModule],
-          componentProperties: {
-            colors: ['#fff', '#eee'],
-            formControl,
-          },
+      const { getByRole } = await render(`<app-colorpicker [colors]="colors" [formControl]="formControl"/>`, {
+        imports: [ColorpickerComponent, ReactiveFormsModule],
+        componentProperties: {
+          colors: ['#fff', '#eee'],
+          formControl,
         },
-      );
+      });
       expect(getByRole('option', { selected: true }).getAttribute('title')).toBe('#eee');
     });
 
     it('should pass the clicked value to form control', async () => {
       const formControl = new FormControl('#eee');
-      const { getByTitle } = await render(
-        `<app-colorpicker [colors]="colors" [formControl]="formControl"></app-colorpicker>`,
-        {
-          imports: [ColorpickerComponent, ReactiveFormsModule],
-          componentProperties: {
-            colors: ['#fff', '#eee'],
-            formControl,
-          },
+      const { getByTitle } = await render(`<app-colorpicker [colors]="colors" [formControl]="formControl"/>`, {
+        imports: [ColorpickerComponent, ReactiveFormsModule],
+        componentProperties: {
+          colors: ['#fff', '#eee'],
+          formControl,
         },
-      );
-      getByTitle('#fff').click();
+      });
+      await userEvent.click(getByTitle('#fff'));
       expect(formControl.value).toBe('#fff');
     });
 
@@ -111,7 +100,7 @@ describe('ColorpickerComponent', () => {
       const formControl = new FormControl('#eee');
       const colors = ['#fff', '#eee'];
       const { rerender } = await render(
-        `<app-colorpicker [colors]="colors" [value]="selectedColor" [formControl]="formControl"></app-colorpicker>`,
+        `<app-colorpicker [colors]="colors" [value]="selectedColor" [formControl]="formControl"/>`,
         {
           imports: [ColorpickerComponent, ReactiveFormsModule],
           componentProperties: {

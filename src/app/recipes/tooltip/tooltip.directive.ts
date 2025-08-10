@@ -29,7 +29,6 @@ export class TooltipComponent {
 
 @Directive({
   selector: '[appTooltip]',
-  standalone: true,
 })
 export class TooltipDirective {
   private readonly vcRef = inject(ViewContainerRef);

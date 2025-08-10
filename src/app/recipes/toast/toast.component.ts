@@ -1,5 +1,5 @@
 import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, inject, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 
 export class ToastContext {
@@ -8,13 +8,11 @@ export class ToastContext {
 
 @Component({
   template: `<div>{{ context.message }}</div>`,
-  styles: [
-    `
-      :host {
-        display: block;
-      }
-    `,
-  ],
+  styles: `
+    :host {
+      display: block;
+    }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('state', [
@@ -27,37 +25,31 @@ export class ToastContext {
   host: {
     role: 'status',
     'aria-live': 'polite',
-    '[@state]': 'animationState',
+    '[@state]': 'animationState()',
     '(@state.done)': 'onAnimationDone($event)',
   },
-  standalone: true,
 })
 export class ToastComponent implements OnDestroy {
-  private readonly cdRef = inject(ChangeDetectorRef);
   readonly context = inject(ToastContext);
 
-  animationState = 'void';
+  readonly animationState = signal<'void' | 'hidden' | 'visible'>('void');
 
   readonly afterDismissed = new Subject<void>();
-  private destroyed = false;
+  private readonly destroyed = signal(false);
 
   ngOnDestroy() {
-    this.destroyed = true;
+    this.destroyed.set(true);
     this.completeEnd();
   }
 
-  detectChanges() {
-    this.cdRef.detectChanges();
-  }
-
   enter() {
-    if (!this.destroyed) {
-      this.animationState = 'visible';
+    if (!this.destroyed()) {
+      this.animationState.set('visible');
     }
   }
 
   exit() {
-    this.animationState = 'hidden';
+    this.animationState.set('hidden');
   }
 
   onAnimationDone(event: AnimationEvent) {
